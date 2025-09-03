@@ -8,35 +8,24 @@ The system enables users to:
   - Manage orders, products, and users via an admin website.
 The solution addresses key challenges in online shopping such as lack of visualization, low purchase confidence, and high product return rates, while promoting sustainability by reducing unnecessary consumption.
 
-🚀 Features
-🔐 Authentication
+Features
 
-Register & log in (email, Google OAuth)
+Authentication
+- Register & log in (email, Google OAuth)
+- Secure OTP-based password reset
+- Multi-factor authentication for admins
 
-Secure OTP-based password reset
+Shopping & Services
+- Browse products by category, price, material
+- Add to cart & wishlist
+- Checkout with multiple payment options (Card, COD, Bank Transfer)
+- Book piercing services with real-time scheduling
 
-Multi-factor authentication for admins
+AR Virtual Try-On
+- Real-time jewelry placement using MediaPipe
+- 3D rendering with Google Filament
+- Snapshot & sharing feature
 
-🛍️ Shopping & Services
-
-Browse products by category, price, material
-
-Add to cart & wishlist
-
-Checkout with multiple payment options (Card, COD, Bank Transfer)
-
-Book piercing services with real-time scheduling
-
-📱 AR Virtual Try-On
-
-Real-time jewelry placement using MediaPipe
-
-3D rendering with Google Filament
-
-Snapshot & sharing feature
-
-👩‍💼 Admin Website
-
-Manage products, categories, and inventory
-
-Manage customer accounts and bookings
+Admin Website
+- Manage products, categories, and inventory
+- Manage customer accounts and bookings
