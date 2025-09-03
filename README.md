@@ -40,8 +40,8 @@ The solution addresses key challenges in online shopping such as lack of visuali
 
 ## Tech Stack  
 
-- **Frontend (Mobile App):** Android Studio (Java/Kotlin), ARCore, MediaPipe, Google Filament  
-- **Frontend (Admin Website):** Angular or React with Tailwind CSS  
+- **Frontend (Mobile App):** Android Studio (Java/Kotlin), MediaPipe, Google Filament  
+- **Frontend (Admin Website):** Angular 
 - **Backend:** Firebase (Authentication, Firestore Database, Cloud Functions, Analytics)  
-- **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN), Adobe Illustrator (Branding)  
+- **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)
 - **Version Control:** GitHub  
