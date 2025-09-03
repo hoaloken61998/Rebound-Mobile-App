@@ -29,3 +29,15 @@ AR Virtual Try-On
 Admin Website
 - Manage products, categories, and inventory
 - Manage customer accounts and bookings
+
+Tech Stack
+
+Frontend (Mobile App): Android Studio (Java/Kotlin), ARCore, MediaPipe, Google Filament
+
+Frontend (Admin Website): Angular / React + Tailwind
+
+Backend: Firebase (Authentication, Firestore DB, Cloud Functions, Analytics)
+
+Design Tools: Figma (UI/UX), Draw.io (UML, ERD, BPMN), Adobe Illustrator (branding)
+
+Version Control: GitHub
