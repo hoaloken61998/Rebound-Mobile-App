@@ -44,4 +44,11 @@ The solution addresses key challenges in online shopping such as lack of visuali
 - **Frontend (Admin Website):** Angular 
 - **Backend:** Firebase (Authentication, Firestore Database, Cloud Functions, Analytics)  
 - **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)
-- **Version Control:** GitHub  
+- **Version Control:** GitHub
+
+## Results
+
+- The AR virtual try-on was tested on multiple Android devices.
+- The hybrid recommender system improved product relevance and user engagement.
+- User interface and experience were validated through Figma prototypes.
+- The system enhanced purchase satisfaction and reduced hesitation in online shopping.
