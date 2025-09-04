@@ -1,0 +1,78 @@
+<div class="form-container">
+  <h1>Customer Details</h1>
+  <fieldset>
+    <!-- Customer Information -->
+    <div class="customer-info-section">
+      <!-- User ID -->
+      <label><strong>User ID:</strong></label>
+      <p>{{ customer.UserID || 'N/A' }}</p>
+
+      <!-- Full Name -->
+      <label><strong>Full Name:</strong></label>
+      <p>{{ customer.FullName || 'N/A' }}</p>
+
+      <!-- Phone Number -->
+      <label><strong>Phone Number:</strong></label>
+      <p>{{ customer.PhoneNumber || 'N/A' }}</p>
+
+      <!-- Email -->
+      <label><strong>Email:</strong></label>
+      <p>{{ customer.Email || 'N/A' }}</p>
+
+      <!-- Date of Birth -->
+      <label><strong>Date of Birth:</strong></label>
+      <!-- Sửa lỗi "always truthy" -->
+      <p>{{ customer.DateOfBirth ? (customer.DateOfBirth | date:'mediumDate') : 'N/A' }}</p>
+
+      <!-- User Ranking -->
+      <label><strong>User Ranking:</strong></label>
+      <p>{{ customer.UserRanking || 'N/A' }}</p>
+
+      <!-- Registration Date -->
+      <label><strong>Registration Date:</strong></label>
+      <!-- Sửa lỗi "always truthy" -->
+      <p>{{ customer.RegistrationDate ? (customer.RegistrationDate | date:'medium') : 'N/A' }}</p>
+
+      <!-- Sex -->
+      <label><strong>Sex:</strong></label>
+      <p>{{ customer.Sex || 'N/A' }}</p>
+
+      <!-- Default Address -->
+      <label><strong>Default Address:</strong></label>
+      <p>
+        {{ customer.Address?.Street || 'N/A' }},
+        {{ customer.Address?.Ward || 'N/A' }},
+        {{ customer.Address?.District || 'N/A' }},
+        {{ customer.Address?.Province || 'N/A' }}
+      </p>
+    </div>
+
+    <!-- Order History -->
+    <h2>Order History</h2>
+    <table *ngIf="orders.length > 0">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Status</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.OrderID || 'N/A' }}</td>
+          <!-- formatDateTime và formatCurrency giờ đây đã có trong TS -->
+          <td>{{ formatDateTime(order.OrderDate) }}</td>
+          <td>{{ order.Status || 'N/A' }}</td>
+          <td>{{ formatCurrency(order.TotalAmount) }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="orders.length === 0">No orders found for this customer.</p>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="btn back-button" (click)="goBack()">Back</button>
+    </div>
+  </fieldset>
+</div>

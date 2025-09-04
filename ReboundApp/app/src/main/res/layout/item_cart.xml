@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingVertical="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Image Placeholder -->
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/placeholder"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Info Column -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtProductName"
+                android:text="@string/product_name"
+                android:letterSpacing="0.2"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#867B4A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtProductVariant"
+                android:text="Silver"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Quantity Controls -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnMinus"
+                    android:src="@mipmap/ic_minus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+
+                <TextView
+                    android:id="@+id/txtProductQuantity"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/btnPlus"
+                    android:src="@mipmap/ic_plus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+            </LinearLayout>
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/txtProductPrice"
+                android:text="250.000"
+                android:textColor="#AB9E67"
+                android:textSize="15sp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE" />
+</LinearLayout>

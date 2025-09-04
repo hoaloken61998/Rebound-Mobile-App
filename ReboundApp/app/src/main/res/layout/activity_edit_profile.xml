@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/imgBackEditProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/txtEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_edit_profile"
+            android:textColor="#1E1E1E"
+            android:textSize="20sp"
+            android:layout_marginTop="7dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/imgBackEditProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/avatarContainer"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/txtEditProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_avatar_sample"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true" />
+
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="4dp"
+                android:background="@drawable/circle_brown"
+                android:padding="6dp"
+                android:src="@mipmap/ic_edit"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtAvatarNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giang Bao Tran"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/avatarContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/edtEditProfileUsername"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="@string/title_edit_profile_username_hint"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatarContainer" />
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/edtEditProfileFullName"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="@string/title_edit_profile_fullname_hint"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEditProfileUsername" />
+
+        <!-- Gender Spinner -->
+        <!-- Gender Spinner với icon tam giác -->
+        <RelativeLayout
+            android:id="@+id/spGenderWrapper"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_bg"
+            app:layout_constraintTop_toBottomOf="@id/edtEditProfileFullName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Spinner
+                android:id="@+id/spGenderEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="20dp"
+                android:paddingEnd="40dp"
+                android:background="@android:color/transparent"
+                android:entries="@array/gender_options"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:id="@+id/spinnerArrow"
+                android:layout_width="15dp"
+                android:layout_height="19dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@mipmap/ic_arrow_down" />
+        </RelativeLayout>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/edtEditProfileEmail"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="@string/title_edit_profile_email_hint"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spGenderWrapper"
+            />
+
+        <!-- Phone -->
+        <EditText
+            android:id="@+id/edtEditProfilePhone"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="@string/title_edit_profile_phone_hint"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEditProfileEmail" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/edtEditProfilePassword"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="@string/title_edit_profile_password_hint"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#AFAFAF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEditProfilePhone" />
+
+        <!-- Update Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdate"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_button_update"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#89784B"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEditProfilePassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,64 @@
+<div class="login-container">
+  <div class="login-wrapper">
+    <div class="ear-image-container"></div>
+    <div class="login-form-container">
+      <div class="logo-container"></div>
+      
+      <!-- Feedback messages (Error or Success) -->
+      <div class="form-feedback">
+        <div *ngIf="errorMessage" class="error-message">
+          <small>{{ errorMessage }}</small>
+        </div>
+        <div *ngIf="successMessage" class="success-message">
+          <small>{{ successMessage }}</small>
+        </div>
+      </div>
+
+      <!-- Login form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email"  
+            placeholder="Enter your email">
+          <!-- Hiển thị lỗi validation cho email -->
+          <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="validation-error">
+            <small *ngIf="loginForm.get('email')?.errors?.['required']">Email là bắt buộc.</small>
+            <small *ngIf="loginForm.get('email')?.errors?.['email']">Email không hợp lệ.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password <span class="required">*</span></label>
+          <input 
+            type="password" 
+            id="password" 
+            formControlName="password"  
+            placeholder="Enter your password">
+          <!-- Hiển thị lỗi validation cho password -->
+          <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="validation-error">
+            <small *ngIf="loginForm.get('password')?.errors?.['required']">Mật khẩu là bắt buộc.</small>
+            <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Mật khẩu phải có ít nhất 6 ký tự.</small>
+          </div>
+        </div>
+
+        <!-- Remember Password & Forgot Password -->
+        <div class="form-options">
+          <div class="remember-password">
+            <input 
+              type="checkbox" 
+              id="rememberMe" 
+              formControlName="rememberMe"> <!-- Đổi id và formControlName thành rememberMe -->
+            <label for="rememberMe">Remember me</label>
+          </div>
+          <!-- Nút Forgot Password gọi hàm forgotPassword() -->
+          <a class="forgot-password-link" (click)="forgotPassword()">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-button" [disabled]="loginForm.invalid">Log in</button>
+      </form>
+    </div>
+  </div>
+</div>

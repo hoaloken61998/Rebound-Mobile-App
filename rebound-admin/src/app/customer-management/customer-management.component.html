@@ -1,0 +1,76 @@
+<div class="container">
+    <!-- Search Bar -->
+    <div class="search-box">
+        <input type="text" placeholder="Search customers..." (input)="updateSearchQuery($event)" />
+        <button aria-label="Search customers">
+            <svg width="100%" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11.7422 10.3439C12.5329 9.2673 13 7.9382 13 6.5C13 2.91015 10.0899 0 6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C7.93858 13 9.26801 12.5327 10.3448 11.7415L10.3439 11.7422C10.3734 11.7822 10.4062 11.8204 10.4424 11.8566L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L11.8566 10.4424C11.8204 10.4062 11.7822 10.3734 11.7422 10.3439ZM12 6.5C12 9.53757 9.53757 12 6.5 12C3.46243 12 1 9.53757 1 6.5C1 3.46243 3.46243 1 6.5 1C9.53757 1 12 3.46243 12 6.5Z"
+                    fill="black" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Customer Management</h1>
+    </div>
+
+    <!-- Customer Overview Boxes -->
+    <div class="customer-overview">
+        <div class="overview-box">
+            <h4>Total Customers</h4>
+            <p>{{ customers.length }}</p>
+        </div>
+        <div class="overview-box">
+            <h4>Top Tier Users</h4>
+            <p>{{ topTierUsers.length }}</p>
+        </div>
+        <div class="overview-box">
+            <h4>Recent Sign-ups</h4>
+            <p>{{ recentUsers.length }}</p>
+        </div>
+    </div>
+
+    <!-- Customer Table -->
+    <table class="customer-table">
+        <thead class="customer-table-header">
+            <tr>
+                <th><input type="checkbox" class="header-checkbox" (click)="selectAllCustomers($event)" /></th>
+                <th>User ID</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of filteredCustomers" class="customer-table-row">
+                <td><input type="checkbox" [checked]="customer.selected" (change)="toggleCustomerSelection(customer)" />
+                </td>
+                <td>{{ customer.UserID }}</td>
+                <td>{{ customer.Email }}</td>
+                <td>{{ customer.FullName }}</td>
+                <td>{{ customer.PhoneNumber }}</td>
+                <td>
+                    <div class="table-actions">
+                        <button type="button" [routerLink]="['/customer-detail', customer.id]" routerLinkActive="active-link">
+                          View Details
+                        </button>
+                        <button (click)="editCustomer(customer.id)" aria-label="Edit customer">Edit</button>
+                        <button (click)="deleteCustomer(customer.id)" aria-label="Delete customer">Delete</button>
+                    </div>
+                </td>
+            </tr>
+            <!-- Message when no customers found -->
+            <tr *ngIf="filteredCustomers.length === 0">
+                <td colspan="6" style="text-align: center;">No customers found.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Delete Selected Button -->
+    <button class="delete-button" (click)="deleteSelectedCustomers()" aria-label="Delete selected customers">
+        Delete Selected
+    </button>
+</div>

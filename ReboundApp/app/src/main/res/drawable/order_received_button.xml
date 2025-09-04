@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Nền trắng -->
+            <stroke android:width="0.6dp" android:color="#C4C4C4"/> <!-- Viền xám -->
+            <corners android:radius="25dp"/> <!-- Bo góc -->
+        </shape>
+    </item>
+</selector>

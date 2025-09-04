@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #DDD7C0;
+    flex-shrink: 0;
+}
+
+  
+  .header img {
+    height: 40px; /* Điều chỉnh kích thước logo */
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header .icon-bell {
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    color: #F4F2EB;
+    align-content: center;
+  }
+  
+  .header .icon-bell svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #CFC7A6; /* Màu nền */
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .user-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff; /* Màu của icon */
+  }
+  

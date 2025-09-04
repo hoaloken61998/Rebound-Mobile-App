@@ -1,0 +1,92 @@
+.form-container {
+    background-color: #F4F2EB;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.form-container h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #595031;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #D1CBB8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4D4D4D;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #D1CBB8;
+}
+
+th {
+    background-color: #8A7F52;
+    color: white;
+}
+
+.action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 4dvh;
+    }
+
+    .btn {
+        height: 42px;
+        width: 137px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size:15px;
+        background-color: #DDD7C0;
+        color: #595031;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+.order-status {
+    font-size: 18px;
+    font-weight: 600;
+    color: #595031;
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #D1CBB8;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 12px 0; /* Tạo khoảng cách giữa các hàng */
+}
+
+/* Cập nhật margin cho các hàng để tạo khoảng cách giữa các hàng */
+fieldset > div {
+    margin-bottom: 30px; /* Điều chỉnh khoảng cách giữa các dòng */
+}
+
+fieldset h2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+}

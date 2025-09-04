@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutBankTransfer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal">
+
+    <!-- Back and Title on the same row -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/txtPaymentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_payment_bank_transfer"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgPaymentBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:src="@mipmap/ic_back" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtBankTransferSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/title_bank_transfer_qr_subtitle" />
+
+    <ImageView
+        android:id="@+id/imgBankTransferQRCode"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/txtBankTransferTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_bank_transfer_qr_timer_default"
+        android:textColor="#AA8E3A"
+        android:background="@drawable/bg_qr_timer"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/btnBankTransferRegenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_bank_transferqr_regenerate"
+        android:textColor="#AB9E67"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true" />
+    <Button
+        android:id="@+id/btnConfirmPaymentSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_confirm_payment_success"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_rounded_button"
+        android:backgroundTint="#978C5C" />
+</LinearLayout>

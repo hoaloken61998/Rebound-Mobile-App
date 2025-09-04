@@ -1,0 +1,79 @@
+<div class="form-container">
+    <div class="profile-container">
+        <!-- Ảnh đại diện của khách hàng -->
+        <!-- Sử dụng customer.AvatarURL, với fallback nếu không có ảnh -->
+        <img [src]="customer.AvatarURL || 'https://placehold.co/100x100/eeeeee/black?text=Avatar'" alt="Avatar" class="avatar">
+        <h2>{{ customer.FullName || 'Customer Name' }}</h2> <!-- Hiển thị tên đầy đủ của khách hàng -->
+        <!-- Phần summary (Total order, Total purchase amount) bị loại bỏ như trước -->
+    </div>
+
+    <fieldset>
+        <legend class="info">Customer Information</legend>
+        
+        <!-- User ID (Chỉ đọc) -->
+        <label for="userId">User ID</label>
+        <input type="text" id="userId" [ngModel]="customer.UserID" name="userId" readonly>
+
+        <!-- Full Name (Chỉ đọc) -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" [ngModel]="customer.FullName" name="fullName" readonly>
+
+        <!-- Email (Có thể chỉnh sửa) -->
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="customer.Email" name="email">
+
+        <!-- Phone Number (Có thể chỉnh sửa) -->
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" [(ngModel)]="customer.PhoneNumber" name="phoneNumber">
+
+        <!-- Address (Chỉ đọc) -->
+        <label for="addressStreet">Address (Street)</label>
+        <input type="text" id="addressStreet" [ngModel]="customer.Address?.Street" name="addressStreet" readonly>
+        
+        <label for="addressWard">Address (Ward)</label>
+        <input type="text" id="addressWard" [ngModel]="customer.Address?.Ward" name="addressWard" readonly>
+        
+        <label for="addressDistrict">Address (District)</label>
+        <input type="text" id="addressDistrict" [ngModel]="customer.Address?.District" name="addressDistrict" readonly>
+        
+        <label for="addressProvince">Address (Province)</label>
+        <input type="text" id="addressProvince" [ngModel]="customer.Address?.Province" name="addressProvince" readonly>
+
+        <div class="row">
+            <!-- Status (UserRanking - Có thể chỉnh sửa) -->
+            <div class="col">
+                <label for="status">Status</label>
+                <select id="status" [(ngModel)]="customer.UserRanking" name="userRanking">
+                    <option value="">Select Ranking</option> <!-- Tùy chọn rỗng -->
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Diamond">Diamond</option>
+                </select>
+            </div>
+            <!-- Day of birth (Chỉ đọc) -->
+            <div class="col">
+                <label for="dob">Day of birth</label>
+                <input type="date" id="dob" [ngModel]="customer.DateOfBirth" name="dateOfBirth" readonly>
+            </div>
+        </div>
+
+        <!-- Sex (Chỉ đọc) -->
+        <label for="sex">Sex</label>
+        <select id="sex" [ngModel]="customer.Sex" name="sex" readonly disabled>
+            <option value="">Select Sex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- Description (Có thể chỉnh sửa) -->
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="customer.Description" name="description"></textarea>
+    </fieldset>
+
+    <div class="action-buttons">
+        <button class="btn" (click)="goBack()">Back</button>
+        <button class="btn" (click)="clear()">Clear</button>
+        <button class="btn" (click)="save()">Save</button>
+    </div>
+</div>

@@ -1,0 +1,175 @@
+ /* Import Montserrat font from Google Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  /* Global styles */
+ * {
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif; /* Apply Montserrat globally */
+ }
+ 
+ body {
+     color: #595031;
+     background-color: #F4F2EB;
+ }
+ 
+ .service-table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+ 
+ .service-table-header {
+     background-color: #A89D6E;
+     color: white;
+ }
+ 
+ .service-table th, .service-table td {
+     padding: 12px 15px;
+     text-align: center;
+     border-bottom: 1px solid #e0e0e0;
+ }
+ 
+ .service-table-row {
+     background-color: white;
+ }
+ 
+ .service-table-row:hover {
+     background-color: #f5f5f5;
+ }
+ 
+ .table-actions {
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+ }
+ 
+ button {
+     border: none;
+     background: none;
+     outline: none;
+     cursor: pointer;
+ }
+ 
+ /* Delete button styling */
+ .delete-button {
+     background-color: #ddd7c0;
+     color: #4b3d2d;
+     border: none;
+     border-radius: 5px;
+     padding: 12px 30px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+     font-size: 15px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+     width: 137px;
+     height: 42px;
+     margin: 20px auto;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .delete-button:hover {
+     background-color: #b1a681;
+     transform: translateY(-2px);
+ }
+ 
+ .delete-button:focus {
+     outline: none;
+ }
+ 
+ /* Add button styling */
+ .add-button {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 8px;
+     width: 103px;
+     height: 40px;
+     background-color: #C4B79D;
+     border-radius: 15px;
+     color: white;
+     cursor: pointer;
+     border: none;
+     position: absolute;
+     right: 5px;
+     top: calc(100% - 80px);
+     margin-top: 10px;
+     font-weight: bold;
+     font-size: 16px;
+ }
+ 
+ .header h1 {
+     font-size: 32px;
+     margin-bottom: 7px;
+     padding: 0;
+     color: #595031;
+     font-weight: bold;
+ }
+ 
+ .header h3 {
+     font-size: 24px;
+     margin-bottom: 82px;
+     padding: 0;
+     color: #595031;
+ }
+ 
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #F4F2EB;
+     padding: 20px;
+     position: relative;
+ }
+ 
+ .header div {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ /* Search Box Styling */
+ .search-box {
+     display: flex;
+     align-items: center;
+     background: white;
+     border: 1px solid #A89D6E;
+     border-radius: 20px;
+     padding: 8px 15px;
+     width: 100%;
+     margin: 15px auto;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .search-box input {
+     flex: 1;
+     border: none;
+     outline: none;
+     font-size: 14px;
+     padding: 5px;
+     color: #595031;
+ }
+ 
+ .search-box button {
+     border: none;
+     background: none;
+     cursor: pointer;
+     font-size: 16px;
+     color: #A89D6E;
+ }
+ 
+ .search-box button:hover {
+     color: #595031;
+ }
+
+ /* Style the checkbox itself */
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 2px solid #A89D6E; /* Default border color */
+    border-radius: 4px;
+    background-color: #fff; /* Unchecked background */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions for background and border */
+}

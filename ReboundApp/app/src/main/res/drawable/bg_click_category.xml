@@ -1,0 +1,7 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu khi nhấn -->
+    <item android:drawable="@color/colorPressed" android:state_pressed="true" />
+    <!-- Mặc định trong suốt -->
+    <item android:drawable="@android:color/transparent" />
+</selector>

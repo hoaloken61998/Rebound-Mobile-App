@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Giữ các box trên cùng một hàng */
+  gap: 40px; /* Khoảng cách giữa các box */
+  padding: 20px; /* Thêm padding để tránh dính sát lề */
+  overflow: hidden; /* Tránh tràn màn hình */
+}
+
+.custom-box {
+  width: 100%;
+  max-width: 329px; /* Kích thước tối đa của box */
+  min-width: 200px; /* Đảm bảo không bị quá nhỏ */
+  height: 152px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Cho phép co giãn để luôn giữ trên cùng 1 hàng */
+}
+
+/* Điều chỉnh font chữ để thu nhỏ theo kích thước màn hình */
+.custom-text {
+  color: #595031;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 2vw, 24px); /* Tự động điều chỉnh từ 18px đến 24px */
+  font-weight: bold;
+}
+
+.custom-number {
+  color: #595031;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(24px, 3vw, 32px); /* Tự động điều chỉnh từ 24px đến 32px */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 1024px) {
+  .custom-container {
+    gap: 20px; /* Giảm khoảng cách khi màn hình nhỏ hơn */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-container {
+    flex-wrap: wrap; /* Khi quá nhỏ, box sẽ tự xuống hàng */
+  }
+
+  .custom-box {
+    max-width: 30%; /* Mỗi box chiếm khoảng 30% màn hình */
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-container {
+    flex-direction: column; /* Khi quá nhỏ, box xếp dọc */
+    gap: 15px;
+  }
+
+  .custom-box {
+    max-width: 90%; /* Chiếm gần hết màn hình */
+  }
+}

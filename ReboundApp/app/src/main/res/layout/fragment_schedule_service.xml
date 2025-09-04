@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:paddingBottom="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!-- Chuông bên phải -->
+            <ImageView
+                android:id="@+id/imgBell"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:src="@mipmap/ic_bell" />
+
+
+            <!-- Logo ở giữa, đè lên chuông nếu trùng -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_logo_small" />
+        </FrameLayout>
+
+
+
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/txtScheduleBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_schedule_rebound_branches"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+
+        <!-- Branch buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+
+            <Button
+                android:id="@+id/btnScheduleHanoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_button_schedule_hanoi"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+                android:backgroundTint="#F2F0D4"
+                android:textColor="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/btnScheduleHCM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_button_schedule_ho_chi_minh"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#22000000" />
+        </LinearLayout>
+
+
+        <!-- Branch images -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+
+            <ImageView
+                android:id="@+id/imgBranch1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/branch1" />
+
+
+            <ImageView
+                android:id="@+id/imgBranch2"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/branch2" />
+        </LinearLayout>
+
+
+        <!-- Branch info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtScheduleBranch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_branch1"
+                    android:textColor="#AB9E67"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/ic_address_schedule"
+                        android:layout_marginEnd="6dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtScheduleAddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_schedule_branch1_address"
+                        android:textSize="10sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/ic_clock"
+                        android:layout_marginEnd="6dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtScheduleTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_schedule_branch_hours"
+                        android:textSize="10sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txtScheduleBranch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_branch2"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#AB9E67" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/ic_address_schedule"
+                        android:layout_marginEnd="6dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtScheduleAddress2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_schedule_branch2_address"
+                        android:textSize="10sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@mipmap/ic_clock"
+                        android:layout_marginEnd="6dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtScheduleTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_schedule_branch_hours"
+                        android:textSize="10sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Services -->
+        <TextView
+            android:id="@+id/txtScheduleSelectService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_schedule_select_service"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000" />
+
+
+        <!-- One service item -->
+        <!-- Service 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service1"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service1_description"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service1_price"
+                    android:textStyle="bold"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service1_duration"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnScheduleSelected1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="0dp"
+                android:padding="1dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="@string/title_button_schedule_selected"
+                app:strokeColor="#CCCCCC"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+
+        <!-- Horizontal Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+
+        <!-- Service 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service2"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service2_description"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service2_price"
+                    android:textStyle="bold"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service2_duration"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnScheduleSelected2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="0dp"
+                android:padding="1dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="@string/title_button_schedule_selected"
+                app:strokeColor="#CCCCCC"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+
+        <!-- Horizontal Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+
+        <!-- Service 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+
+
+            android:paddingBottom="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service3"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service3_description"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service3_price"
+                    android:textStyle="bold"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service3_duration"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnScheduleSelected3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="0dp"
+                android:padding="1dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="@string/title_button_schedule_selected"
+                app:strokeColor="#CCCCCC"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+
+        <!-- Service 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="10dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service4"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service4_description"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service4_price"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_service4_duration"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnScheduleSelected4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="0dp"
+                android:padding="1dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="@string/title_button_schedule_selected"
+                app:strokeColor="#CCCCCC"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+
+
+
+        <!-- Appointment Time Section -->
+        <TextView
+            android:id="@+id/txtScheduleSelectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_schedule_select_appointment_time"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000" />
+
+
+        <!-- Calendar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:elevation="1dp"
+            android:background="@drawable/bg_calendar"
+            android:layout_marginBottom="1dp">
+
+
+
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:calendarViewShown="true"
+                android:focusedMonthDateColor="#000000"
+                android:selectedWeekBackgroundColor="#AB9E67"
+                android:showWeekNumber="false"
+                android:unfocusedMonthDateColor="#888888"
+                android:weekSeparatorLineColor="#CCCCCC" />
+            <!-- Divider line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="8dp" />
+            <!-- Time selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:elevation="1dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_schedule_time_label"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:padding="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/txtScheduleSelectedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_schedule_default_time"
+                    android:textSize="17sp"
+                    app:cornerRadius="6dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <!-- Book Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScheduleBook"
+            android:layout_width="257dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/title_schedule_book_appointment"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:strokeColor="#BEB488"
+            app:strokeWidth="1dp"
+            android:layout_gravity="center_horizontal"
+            app:cornerRadius="10dp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
+

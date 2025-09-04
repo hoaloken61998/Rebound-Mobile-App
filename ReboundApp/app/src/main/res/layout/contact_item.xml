@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:background="@android:color/transparent">
+
+    <!-- Hàng tiêu đề: icon + tiêu đề + toggle -->
+    <LinearLayout
+        android:id="@+id/layoutContactHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp">
+
+        <ImageView
+            android:id="@+id/imgContactIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/ic_customer_service_help"
+            android:tint="#7C6F34" />
+
+        <TextView
+            android:id="@+id/txtContactusContactname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#7C6F34"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold" />
+
+        <ImageView
+            android:id="@+id/imgContactusButtonMore"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_plus_detail"
+            android:tint="#7C6F34" />
+    </LinearLayout>
+
+    <!-- Nội dung mở rộng -->
+    <TextView
+        android:id="@+id/txtContactusContactDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="#7C6F34"
+        android:paddingStart="30dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat_italic" />
+
+    <!-- Đường phân cách -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#DDDDDD" />
+</LinearLayout>

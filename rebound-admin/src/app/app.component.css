@@ -1,0 +1,103 @@
+/* src/app/app.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'); /* Thêm weight 400 và 600 nếu cần */
+
+/* Đặt font Montserrat toàn cục cho ứng dụng nếu chưa có trong styles.css */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Ngăn cuộn toàn bộ trang */
+  background-color: #F4F2EB; /* Màu nền chung */
+  color: #595031; /* Màu chữ chung */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Header trên cùng, sau đó là content-container */
+  height: 100vh; /* Chiều cao toàn bộ viewport */
+  width: 100vw;
+}
+
+.content-container {
+  display: flex; /* Sidebar và nội dung chính cạnh nhau */
+  flex: 1; /* Chiếm hết chiều cao còn lại sau header */
+  overflow: hidden; /* Quan trọng để sidebar và content có thể cuộn riêng */
+}
+
+.side-nav-bar {
+  width: 250px; /* Sidebar có chiều rộng cố định */
+  background-color: #DDD7C0;
+  display: flex;
+  flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
+  border-right: 0.5px solid #F4F2EB;
+  font-family: 'Montserrat', sans-serif; /* Đảm bảo font */
+  font-size: 15px;
+  font-weight: 600;
+  height: 100%; /* Chiếm toàn bộ chiều cao của content-container */
+  position: sticky; /* Đảm bảo sidebar luôn cố định khi cuộn */
+  top: 0; /* Cố định ở đầu */
+  overflow-y: auto; /* Cho phép cuộn nếu các mục nav quá dài */
+}
+
+/* Các style của nav-item bạn đã cung cấp */
+.nav-item {
+  list-style: none; /* Đảm bảo không có dấu chấm list */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  cursor: pointer;
+  border-bottom: 0.5px solid #F4F2EB; /* Dùng border-bottom để ngăn cách */
+  height: 60px;
+  box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều cao */
+  white-space: nowrap; /* Ngăn chữ bị ngắt dòng */
+  overflow: hidden; /* Ẩn phần chữ nếu quá dài */
+  text-overflow: ellipsis; /* Hiển thị dấu ba chấm nếu bị cắt */
+  color: #595031; /* Màu chữ mặc định */
+}
+/* Border top cho nav-item đầu tiên nếu muốn */
+.nav-item:first-child {
+    border-top: 0.5px solid #F4F2EB;
+}
+
+
+.nav-item:hover {
+  background-color: #C2B694;
+  color: #F4F2EB; /* Màu chữ khi hover */
+}
+
+.nav-item.active {
+  background-color: #A6986B;
+  color: #fff; /* Màu chữ khi active */
+}
+
+.icons {
+  width: 24px;
+  height: 24px;
+  /* Nếu là SVG icon, fill color sẽ được kiểm soát bởi CSS của nav-item hover/active */
+  /* Nếu là img, không thể thay đổi màu bằng CSS */
+  display: flex; /* Dùng flex để căn giữa icon nếu nó nhỏ hơn 24px */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Đảm bảo SVG icons kế thừa màu từ parent */
+.nav-item.active .icons svg {
+    fill: #fff; /* Màu trắng khi nav-item active */
+}
+.nav-item:hover .icons svg {
+    fill: #F4F2EB; /* Màu khi nav-item hover */
+}
+.nav-item .icons svg {
+    fill: #595031; /* Màu mặc định của icon */
+}
+
+
+.content {
+  flex: 1; /* Nội dung chiếm phần còn lại */
+  padding: 20px;
+  background-color: #F4F2EB;
+  overflow-y: auto; /* Cho phép cuộn phần nội dung nếu nó dài */
+}

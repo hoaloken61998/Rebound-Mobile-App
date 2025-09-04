@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ReboundLogin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryVariant">#847c4a</item>
+        <item name="colorOnPrimary">@android:color/transparent</item>
+        <!--  FAB sẽ dùng colorSecondary nếu không được ghi đè  -->
+        <item name="colorSecondary">#867B4A</item>
+        <item name="textAllCaps">false</item>
+        <item name="materialButtonStyle">@style/MyButtonStyle</item>
+        <!--  Status bar  -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorPrimary">#867B4A</item> <!-- màu nền AppBar -->
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="Theme.ReboundLogin" parent="Base.Theme.ReboundLogin" />
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+    <style name="Base.Theme.Rebound" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    </style>
+
+    <style name="Theme.Rebound" parent="Base.Theme.Rebound" />
+
+</resources>
