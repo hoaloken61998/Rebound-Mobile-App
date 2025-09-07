@@ -6,7 +6,7 @@ This project is based on our research paper:
 **“Enhancing Sustainable Consumption in Fashion Accessories through AR-Based Virtual Try-On Systems in Vietnam”**  
 Accepted at **SEBL 2025 Conference**.  
 
-👉 [Full Paper (PDF)](docs/SEBL2025_Paper.pdf)  
+👉 [Full Paper (PDF)](docs/SEBL2025_FULLPAPER.pdf)  
 
 ---
 
