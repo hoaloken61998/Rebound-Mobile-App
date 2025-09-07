@@ -62,3 +62,43 @@ The system enables users to:
 
 ## 📂 Repository Structure  
 
+
+---
+
+## 📊 Results & Findings  
+
+- The system **enhanced purchase satisfaction** and **reduced hesitation** in online shopping.  
+- AR VTO tested successfully on multiple Android devices with lightweight performance.  
+- Hybrid recommender system improved product relevance & personalization.  
+- Booking, authentication, and shopping workflows integrated into a **full e-commerce solution**.  
+- Supports **sustainable consumption** by reducing unnecessary returns & waste.  
+
+---
+
+## ⚠️ Limitations & Future Work  
+
+- Currently available only on **Android**, not iOS.  
+- Supports **rings and piercing jewelry**; future work will expand to earrings, necklaces, and bracelets.  
+- Currently tailored to the **Rebound Piercing brand**; future updates will support multi-brand integration.  
+- Future upgrades will include **AI-powered eco-friendly recommendations** and broader platform support.  
+
+---
+
+## 📌 Publication Reference  
+
+Nguyen Hoang Kim, Ho Song Tin, Nguyen Ngoc Diem Thuy, Bui Thi Hong Thi, Giang Bao Tran, Tran Duy Thanh.  
+*Enhancing Sustainable Consumption in Fashion Accessories through AR-Based Virtual Try-On Systems in Vietnam.*  
+Accepted at SEBL 2025 Conference.  
+
+---
+
+## 👥 Contributors  
+
+- Nguyễn Hoàng Kim  
+- Hồ Song Tín  
+- Nguyễn Ngọc Diểm Thúy  
+- Bùi Thị Hồng Thi  
+- Giang Bảo Trân  
+- **Supervisor:** Ph.D Tran Duy Thanh  
+
+
