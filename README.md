@@ -139,15 +139,15 @@ Accepted at SEBL 2025 Conference.
 \---mobile-app
     |
     +---app
-    |   |
-    |   \---src
-    |       \---main
-    |           |   AndroidManifest.xml
-    |           |
-    |           +---assets
-    |           |
-    |           +---java
-    |           |   \---com
-    |           |       \---rebound
+       |
+       \---src
+           \---main
+               |   AndroidManifest.xml
+               |
+               +---assets
+               |
+               +---java
+                  \---com
+                      \---rebound
 ```
 
