@@ -17,7 +17,6 @@ This project introduces a **mobile-based AR Virtual Try-On (VTO) system** that i
 
 The system enables users to:  
 - 👓 Virtually try on jewelry in **real time** using **MediaPipe** (landmark detection) and **Google Filament** (3D rendering).  
-- 🤖 Receive **personalized recommendations** via a hybrid recommender system (Collaborative + Content-Based Filtering).  
 - 🛍️ Browse, purchase, and book piercing services.  
 - 🛠️ Manage orders, products, and users via an **admin website**.  
 
@@ -54,7 +53,6 @@ The system enables users to:
 - **Frontend (Admin Website):** Angular, TypeScript, HTML, CSS  
 - **Backend:** Firebase (Authentication, Firestore, Cloud Functions, Analytics)  
 - **Database:** Firestore + SQLite (local caching)  
-- **Machine Learning:** Python, Scikit-learn, TensorFlow  
 - **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)  
 - **Version Control:** GitHub  
 
