@@ -90,6 +90,64 @@ Accepted at SEBL 2025 Conference.
 - Nguyễn Ngọc Diểm Thúy  
 - Bùi Thị Hồng Thi  
 - Giang Bảo Trân  
-- **Supervisor:** Ph.D Tran Duy Thanh  
+- **Supervisor:** Ph.D Tran Duy Thanh
 
+## 📂 Repository Structure
+```
+|   .gitignore
+|   LICENSE
+|   README.md
+|   
++---admin-website
+|   |   
+|   +---functions
+|   |   |   .eslintrc.js
+|   |   |   .gitignore
+|   |   |   package-lock.json
+|   |   |   package.json
+|   |   |   tsconfig.dev.json
+|   |   |   tsconfig.json
+|   |   |   
+|   |   \---src
+|   |           index.ts
+|   |
+|   +---public
+|   |   |   begie-logo.jpg
+|   |   |   begie-logo1.jpg
+|   |   |   begie-logo2.jpg
+|   |   |   bg-login.jpg
+|   |   |   favicon.ico
+|   |   |   profile.jpg
+|   |   |
+|   |   \---icons
+|   |           logo.png
+|   |           order.svg
+|   |
+|   \---src
+|       |   index.html
+|       |   main.ts
+|       |   styles.css
+|       |
+|       +---app
+|
++---docs
+|   +---Presentation
+|   |       Project Report.pdf
+|   |
+|   \---System Diagrams
+|
+\---mobile-app
+    |
+    +---app
+    |   |
+    |   \---src
+    |       \---main
+    |           |   AndroidManifest.xml
+    |           |
+    |           +---assets
+    |           |
+    |           +---java
+    |           |   \---com
+    |           |       \---rebound
+```
 
