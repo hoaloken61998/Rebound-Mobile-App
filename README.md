@@ -1,54 +1,64 @@
 # Rebound-Mobile-App  
 
-## Overview  
-This project presents the development of a mobile e-commerce application that integrates **Augmented Reality (AR)** and **Machine Learning (ML)** to provide a **Virtual Try-On (VTO)** experience for fashion accessories, specifically piercing jewelry.  
+## 📄 Academic Background  
+This project is based on our research paper:  
+
+**“Enhancing Sustainable Consumption in Fashion Accessories through AR-Based Virtual Try-On Systems in Vietnam”**  
+Accepted at **SEBL 2025 Conference**.  
+
+👉 [Full Paper (PDF)](docs/SEBL2025_Paper.pdf)  
+
+---
+
+## 🌍 Overview  
+The growth of e-commerce in Vietnam has made fashion accessories more accessible, but it also causes challenges in **visualization, purchase confidence, and sustainability**. Shoppers often cannot preview how products fit, leading to unnecessary consumption and waste.  
+
+This project introduces a **mobile-based AR Virtual Try-On (VTO) system** that integrates **Augmented Reality (AR)** and **Machine Learning (ML)** to improve the shopping experience, reduce product waste, and promote sustainable consumption.  
 
 The system enables users to:  
-- Virtually try on accessories in real time using **MediaPipe** (landmark detection) and **Google Filament** (3D rendering).  
-- Receive personalized product recommendations via a **hybrid recommender system** (Collaborative Filtering + Content-Based Filtering).  
-- Browse, purchase, and book piercing services through a **mobile app**.  
-- Manage orders, products, and users via an **admin website**.  
-
-The solution addresses key challenges in online shopping such as lack of visualization, low purchase confidence, and high product return rates, while promoting sustainability by reducing unnecessary consumption.  
+- 👓 Virtually try on jewelry in **real time** using **MediaPipe** (landmark detection) and **Google Filament** (3D rendering).  
+- 🤖 Receive **personalized recommendations** via a hybrid recommender system (Collaborative + Content-Based Filtering).  
+- 🛍️ Browse, purchase, and book piercing services.  
+- 🛠️ Manage orders, products, and users via an **admin website**.  
 
 ---
 
-## Features  
+## ✨ Features  
 
-### Authentication  
-- Register and log in with email or Google OAuth  
-- Secure OTP-based password reset  
-- Multi-factor authentication for administrators  
+### 🔑 Authentication  
+- Email/Google login and registration  
+- OTP-based password reset  
+- Multi-factor authentication for admins  
 
-### Shopping and Services  
-- Browse products by category, price, and material  
-- Add products to cart and wishlist  
-- Checkout with multiple payment options (Card, Cash on Delivery, Bank Transfer)  
-- Book piercing services with real-time scheduling  
+### 🛒 Shopping & Services  
+- Product browsing (category, price, material filters)  
+- Wishlist and cart functionality  
+- Checkout with **Cash on Delivery, Credit/Debit Card, or Bank Transfer (QR code)**  
+- Service booking with scheduling and reminders  
 
-### AR Virtual Try-On  
-- Real-time jewelry placement using **MediaPipe**  
-- 3D rendering with **Google Filament**  
-- Capture snapshots and share results  
+### 🕶️ AR Virtual Try-On  
+- Real-time jewelry try-on with MediaPipe  
+- Photorealistic rendering with Google Filament  
+- Camera switching, snapshot, and sharing  
 
-### Admin Website  
-- Manage products, categories, and inventory  
-- Manage customer accounts and bookings  
-- Order validation and tracking  
+### 🖥️ Admin Website  
+- Product & inventory management  
+- Customer account and booking management  
+- Order tracking & validation  
 
 ---
 
-## Tech Stack  
+## 🏗️ Tech Stack  
 
-- **Frontend (Mobile App):** Android Studio (Java/Kotlin), MediaPipe, Google Filament  
-- **Frontend (Admin Website):** Angular, JavaScript, HTML, CSS, TypeScript
-- **Backend:** Firebase (Authentication, Firestore Database, Cloud Functions, Analytics)  
-- **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)
-- **Version Control:** GitHub
+- **Frontend (Mobile App):** Android Studio (Java/Kotlin), ARCore, MediaPipe, Google Filament  
+- **Frontend (Admin Website):** Angular, TypeScript, HTML, CSS  
+- **Backend:** Firebase (Authentication, Firestore, Cloud Functions, Analytics)  
+- **Database:** Firestore + SQLite (local caching)  
+- **Machine Learning:** Python, Scikit-learn, TensorFlow  
+- **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)  
+- **Version Control:** GitHub  
 
-## Results
+---
 
-- The AR virtual try-on was tested on multiple Android devices.
-- The hybrid recommender system improved product relevance and user engagement.
-- User interface and experience were validated through Figma prototypes.
-- The system enhanced purchase satisfaction and reduced hesitation in online shopping.
+## 📂 Repository Structure  
+
