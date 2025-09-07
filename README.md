@@ -58,31 +58,6 @@ The system enables users to:
 - **Design Tools:** Figma (UI/UX), Draw.io (UML, ERD, BPMN)  
 - **Version Control:** GitHub  
 
----
-
-## 📂 Repository Structure  
-
-REBOUND-APP/
-│── README.md
-│── LICENSE
-│── .gitignore
-│
-├── docs/ # Paper, system diagrams, slides
-│ ├── SEBL2025_Paper.pdf
-│ ├── System_Diagrams/
-│ 
-│
-├── mobile-app/ # AR Android application
-│ ├── src/
-│ ├── functions/
-│ ├── public/
-│
-├── admin-website/ # Admin panel
-│ ├── src/
-│
-│
----
-
 ## 📊 Results & Findings  
 
 - The system **enhanced purchase satisfaction** and **reduced hesitation** in online shopping.  
