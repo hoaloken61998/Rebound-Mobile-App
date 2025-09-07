@@ -1,0 +1,575 @@
+<resources>
+    <string name="app_name">ReboundLogin</string>
+    <string name="title_button_login_welcome">Login</string>
+    <string name="title_button_register_welcome">Register</string>
+
+    <string name="title_notification_password_changed">Your password has been changed</string>
+
+    <string name="title_subtitle_complete_profile">Don\'t worry, only you can see your personal data. No one else will be able to see it</string>
+
+    <string name="tile_new_password_hint">New Password</string>
+    <string name="title_subtitle_forgot_password">Don\'t worry! It occurs. Please enter the email address linked with your account.</string>
+
+    <string name="title_button_send_code">Send Code</string>
+    <string name="bottom_text_login">Don\'t have an account? <b><font color="#867B4A">Register now</font></b></string>
+    <string name="bottom_text_forgot_password">Remember Password? <b><font color="#867B4A">Login</font></b></string>
+    <string name="title_subtitle_otp_verification">Enter the verification code we just sent on your email address.</string>
+    <string name="bottom_text_otp_verification">Didn\'t received code? <b><font color="#867B4A">Resend</font></b></string>
+    <string name="title_continue_guest_welcome"><u>Continue as a Guest</u></string>
+    <string name="bottom_text_register">Already have an account?  <b><font color="#867B4A">Login now</font></b></string>
+    <string name="title_checkout_info_add_shipping_address">Add shipping address</string>
+
+    <string name="title_add_shipping_address">Add shipping address</string>
+    <string name="title_add_shipping_name_hint">Name</string>
+    <string name="title_add_shipping_address_hint">Address</string>
+    <string name="title_add_shipping_city_hint">City</string>
+    <string name="title_add_shipping_district_hint">District</string>
+    <string name="title_add_shipping_ward_hint">Ward</string>
+    <string name="title_add_shipping_phone_number_hint">Phone number</string>
+    <string name="title_button_add_shipping_address">Add new address</string>
+
+    <string name="btn_close">Close</string>
+    <string name="title_payment_successful">PAYMENT SUCCESS</string>
+    <string name="title_payment_successful_message">Your payment was success</string>
+    <string name="title_payment_successful_order_id">Order ID    15263541</string>
+    <string name="title_payment_successful_rate_prompt">Rate your purchase</string>
+    <string name="btn_payment_successful_back_shop">Back to Shop</string>
+
+    <string name="title_order_id_label">Order ID:</string>
+
+    <string name="title_create_new_card_name_on_card_hint">Name On Card</string>
+    <string name="title_create_new_card_card_number_hint">Card Number</string>
+    <string name="title_create_new_card_exp_month_hint">Exp Month</string>
+    <string name="title_create_new_card_exp_year_hint">Exp Year</string>
+    <string name="title_create_new_card_cvv_hint">CVV</string>
+    <string name="title_button_create_new_card_add_card">Add card</string>
+
+
+    <string-array name="shipping_methods">
+        <item>Select shipping method</item>
+        <item>Pickup at store</item>
+        <item>Standard Delivery</item>
+        <item>Express Delivery</item>
+    </string-array>
+
+
+    <string name="success">Success Icon</string>
+    <string name="title_reserved_successfully">RESERVED SUCCESSFULLY</string>
+    <string name="title_reservation_updated">Your reservation is updated!</string>
+
+    <!-- Appointment Info Labels -->
+    <string name="title_appointment_id_label">Appointment ID:</string>
+    <string name="title_appointment_date_label">Appointment Day:</string>
+    <string name="title_appointment_time_label">Appointment Time:</string>
+
+    <string name="btn_remind_me">Remind me</string>
+
+    <string name="title_search_hint">Search</string>
+    <string name="title_button_search_filter">Filter options</string>
+    <string name="title_searched_recently">Searched Recently</string>
+    <string name="title_search_popular">Popular</string>
+
+    <string name="title_no_results">No Results Found</string>
+    <string name="title_no_results_description">It seems you entered incorrect product information. Please try again!</string>
+
+    <string name="title_my_cart">My Cart</string>
+    <string name="hint_promo_code">Promo Code</string>
+    <string name="btn_apply">Apply</string>
+    <string name="title_payment_summary">Payment Summary</string>
+    <string name="title_label_subtotal">Sub-Total</string>
+    <string name="title_label_delivery_fee">Delivery Fee</string>
+    <string name="title_label_discount">Discount</string>
+    <string name="title_label_total_cost">Total Cost</string>
+    <string name="btn_checkout">Proceed to Checkout</string>
+
+    <string name="title_checkout">Checkout</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="title_notification">Notification</string>
+
+    <string name="title_no_notification">No notification!</string>
+    <string name="btn_go_to_store">Go to store</string>
+
+    <string name="title_schedule_rebound_branches">Rebound Branches</string>
+    <string name="title_button_schedule_hanoi">Hanoi</string>
+    <string name="title_button_schedule_ho_chi_minh">Ho Chi Minh</string>
+    <string name="title_schedule_branch1">Rebound Cao Ba Quat</string>
+    <string name="title_schedule_branch2">Rebound Tam Khuong</string>
+    <string name="title_schedule_branch1_address">34A Cao Ba Quat, Ba Dinh District</string>
+    <string name="title_schedule_branch2_address">77 Tam Khuong, Dong Da District</string>
+    <string name="title_schedule_branch_hours">09:30 - 21:30</string>
+    <string name="title_schedule_select_service">Select a service</string>
+
+    <string name="title_schedule_service1">First Piercing Experience</string>
+    <string name="title_schedule_service1_description">1–2 piercings\nPrice excluding jewellery</string>
+    <string name="title_schedule_service1_price">200.000 VND</string>
+    <string name="title_schedule_service1_duration">40 minutes</string>
+    <string name="title_button_schedule_selected">SELECTED</string>
+
+    <string name="title_schedule_select_appointment_time">Select your appointment time</string>
+    <string name="title_schedule_month_display">June 2025</string>
+    <string name="title_schedule_time_label">Time</string>
+    <string name="title_schedule_default_time">8:00 AM</string>
+    <string name="title_schedule_book_appointment">Book Appointment</string>
+
+
+    <string name="title_schedule_service2">The Quick And Simple Piercing Experience</string>
+    <string name="title_schedule_service2_description">Price excluding jewellery</string>
+    <string name="title_schedule_service2_price">200.000 VND</string>
+    <string name="title_schedule_service2_duration">30 minutes</string>
+
+    <string name="title_schedule_service3">The Extra Piercing Experience - 3-4 piercings</string>
+    <string name="title_schedule_service3_description">Price excluding jewellery</string>
+    <string name="title_schedule_service3_price">200.000 VND</string>
+    <string name="title_schedule_service3_duration">1 hour</string>
+
+    <string name="title_schedule_service4">Piercing Consulting\nStyling</string>
+    <string name="title_schedule_service4_price">Free service</string>
+    <string name="title_schedule_service4_duration">15 minutes</string>
+    <string name="title_schedule_service4_description">After Care Service</string>
+
+    <string name="title_ar_rotation">Rotation</string>
+    <string name="title_ar_add_to_cart">Add to Cart</string>
+    <string name="title_ar_camera">AR Camera</string>
+
+    <string name="title_ar_necklaces">Necklaces</string>
+    <string name="title_ar_earrings">Earrings</string>
+    <string name="title_ar_rings">Rings</string>
+    <string name="title_ar_body_piercing">Body Piercing</string>
+
+    <string name="title_news_main">News</string>
+    <string name="title_latest_news">Latest News</string>">
+
+    <string name="btn_book_appointment">Book Appointment</string>"
+
+
+    <string name="title_checkout_info_shipping_address">SHIPPING ADDRESS</string>
+    <string name="title_checkout_info_shipping_method">SHIPPING METHOD</string>
+    <string name="title_checkout_info_payment_method">PAYMENT METHOD</string>
+    <string name="title_checkout_info_total">TOTAL</string>
+    <string name="title_button_checkout_info">Checkout</string>
+
+    <string name="title_payment_method_card">Payment Method</string>
+
+    <string name="title_button_welcome_login">Login</string>
+    <string name="title_button_welcome_register">Register</string>
+    <string name="title_register_username">Username</string>
+    <string name="title_register_email">Email</string>
+    <string name="title_register_password">Password</string>
+    <string name="title_register_confirm_password">Confirm password</string>
+    <string name="title_or_register_with">Or Register with</string>
+
+    <string name="title_password_changed">Password Changed!</string>
+    <string name="title_password_changed_notification">Your password has been changed</string>
+    <string name="title_button_back_login">Back to Login</string>
+
+    <string name="title_complete_profile">Complete your profile</string>
+    <string name="title_complete_profile_subtitle">Don\'t worry, only you can see your personal data. No one else will be able to see it</string>
+    <string name="title_complete_profile_name">Name</string>
+    <string name="title_complete_profile_phone">Phone number</string>
+    <string name="title_button_complete_profile">Complete profile</string>
+    <string name="title_create_new_password">Create new password</string>
+    <string name="title_subtitle_create_new_password">Your new password must be unique from those previously used.</string>
+    <string name="title_new_password_hint">New Password</string>
+    <string name="title_confirm_password_hint">Confirm Password</string>
+    <string name="title_reset_password">Reset Password</string>
+
+    <string name="title_forgot_password">Forgot Password?</string>
+    <string name="title_forgot_password_subtitle">Don\'t worry! It occurs. Please enter the email address linked with your account.</string>
+    <string name="title_forgot_password_email_hint">Enter your email</string>
+    <string name="title_button_forgot_password_send_code">Send Code</string>
+    <string name="title_login_bottom_text">Don\'t have an account? <b><font color="#867B4A">Register now</font></b></string>
+    <string name="title_forgot_password_bottom_text">Remember Password? <b><font color="#867B4A">Login</font></b></string>
+
+    <string name="title_login_email_hint">Enter your email</string>
+    <string name="title_login_password_hint">Enter your password</string>
+
+    <string name="title_login_forgot_password">Forgot Password?</string>
+    <string name="title_button_login">Login</string>
+    <string name="title_login_with">Or Login with</string>
+
+    <string name="title_OTP_verification">OTP Verification</string>
+    <string name="title_otp_verification_subtitle">Enter the verification code we just sent on your email address.</string>
+    <string name="title_button_verify">Verify</string>
+    <string name="title_otp_verification_bottom_text">Didn\'t received code? <b><font color="#867B4A">Resend</font></b></string>
+
+    <string name="title_profile">Profile</string>
+    <string name="title_your_profile">Your profile</string>
+    <string name="title_profile_payment_methods">Payment methods</string>
+    <string name="title_profile_my_orders">My orders</string>
+    <string name="title_profile_languages">Languages</string>
+    <string name="title_profile_settings">Settings</string>
+    <string name="title_profile_privacy_policy">Privacy policy</string>
+    <string name="title_button_log_out">Log out</string>
+    <string name="title_edit_profile">Edit profile</string>
+    <string name="title_edit_profile_username_hint">Username</string>
+    <string name="title_edit_profile_fullname_hint">Full Name</string>
+    <string name="title_edit_profile_email_hint">Email</string>
+    <string name="title_edit_profile_phone_hint">Phone Number</string>
+    <string name="title_edit_profile_password_hint">Password</string>
+    <string name="title_button_update">Update</string>
+    <string name="title_welcome_continue_guest"><u>Continue as a Guest</u></string>
+    <string name="title_register_bottom_text">Already have an account?  <b><font color="#867B4A">Login now</font></b></string>
+    <string name="title_register_cb_agree">I agree to the terms and conditions.</string>
+    <string name="title_profile_my_order">My Orders</string>
+    <string name="title_profile_language">Language</string>
+    <string name="title_profile_setting">Settings</string>
+    <string name="title_login">Welcome back! Glad to see you, Again!</string>
+
+
+    <string name="title_register">Hello! Register to get started</string>
+    <string name="title_register_username_hint">Username</string>
+    <string name="title_register_email_hint">Email</string>
+    <string name="title_register_password_hint">Password</string>
+    <string name="title_register_confirm_password_hint">Confirm Password</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="payment_method">
+        <item>Select payment method</item>
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+        <item>Bank Transfer</item>
+        <item>Cash on Delivery</item>
+    </string-array>
+
+    <string name="title_log_out">Log out</string>
+    <string name="title_help_center">Help center</string>
+
+    <string name="title_button_checkout">Check out</string>
+    <string name="title_checkout_total">TOTAL</string>
+
+    <string name="title_main_page_necklaces">Necklaces</string>
+    <string name="title_main_page_earrings">Earrings</string>
+    <string name="title_main_page_rings">Rings</string>
+    <string name="title_main_page_body_piercing">Body Piercing</string>
+    <string name="title_main_page_piercing_placements">Piercing Placements</string>
+    <string name="title_main_page_latest_collection">Latest Collection</string>">
+    <string name="title_main_page_product_categories">Product Categories</string>
+
+    <string name="title_earrings">Earrings</string>
+
+    <string name="title_product_detail">Product Detail</string>
+    <string name="title_product_color">Color</string>
+    <string name="title_product_quantity">Quantity</string>
+    <string name="title_product_total_price">TOTAL PRICE</string>
+    <string name="title_helpcenter_helpcenter">Help Center</string>
+    <string name="title_helpcenter_search">Search</string>
+    <string name="title_button_onboarding_skip">Skip</string>
+    <string name="title_button_helpcenter_faqs">FAQs</string>
+    <string name="title_button_helpcenter_contactus">Contact Us</string>
+    <string name="title_button_productdetail_addtocart">ADD TO CART</string>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_news">News</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_share">Share</string>
+    <string name="title_about_us">About Us</string>
+    <string name="title_logout">Log Out</string>
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="title_navigation_shop">Shop</string>
+    <string name="title_navigation_schedule">Schedule</string>
+    <string name="title_navigation_news">News</string>
+    <string name="title_navigation_profile">Profile</string>
+    <string name="title_profile_wishlist">Wishlist</string>
+    <string name="title_wishlist">My Wishlist</string>
+    <string name="title_update_password">Update Password</string>
+    <string name="title_update_password_password_hint">Enter your password</string>
+    <string name="title_button_update_password_send">Send</string>
+    <string name="title_update_password_subtitle">Please enter the current password linked with your account.</string>
+    <string name="title_update_password_bottom_text">Not update anymore? <b><font color="#867B4A">Back</font></b></string>
+
+    <string name="title_appointment_service_label">Service: </string>
+    <string name="back">Back</string>
+    <string name="title_select_language">Select Language</string>
+    <string name="title_english">English</string>
+    <string name="title_vietnamese">Vietnamese</string>
+    <string name="title_buy_again">Buy again</string>
+    <string name="title_delete">Delete</string>
+    <string name="hint_search">Search</string>
+
+
+    <string name="title_checkout_shipping_payment_method">Select payment method</string>
+    <string name="title_button_order_delete">Delete</string>
+    <string name="title_button_order_received">Received</string>
+    <string name="title_button_order_track">Track Order</string>
+    <string name="title_button_order_shipped">Shipped</string>
+    <string name="title_button_order_buy_again">Buy Again</string>
+
+    <string name="title_bank_transfer">Bank Transfer</string>
+    <string name="title_bank_transfer_qr_subtitle">Scan this QR Code to process your payment</string>
+    <string name="title_bank_transfer_qr_timer_default">This QR Code will be expired in 05:00</string>
+    <string name="title_button_bank_transferqr_regenerate">↻ Regenerate the QR Code</string>
+    <string name="title_button_confirm_payment_success">Confirm Payment Success</string>
+
+    <string name="title_payment_bank_transfer">Bank Transfer</string>
+    <string name="title_payment_success">Payment Success</string>
+    <string name="title_payment_transaction_number">Transaction Number</string>
+    <string name="title_payment_time">Time</string>
+    <string name="title_payment_money_sent">Money Sent</string>
+    <string name="title_payment_we_receive">We Receive</string>
+    <string name="title_button_payment_download_receipt">Download Receipt</string>
+
+    <string name="title_logout_message">Message</string>
+    <string name="title_logout_confirmation">Do you want to log out?</string>
+    <string name="title_button_logout_yes">Yes</string>
+    <string name="title_button_logout_no">No</string>
+
+
+    <string name="message_fill_all_fields">Please fill in all fields</string>
+    <string name="message_card_number_16_digits">Card number must be 16 digits</string>
+    <string name="message_invalid_exp_month">Invalid expiration month</string>
+    <string name="message_year_2_digits">Year must be 2 digits</string>
+    <string name="message_cvv_length">CVV must be 3 or 4 digits</string>
+    <string name="message_card_added_success">Card added successfully</string>
+
+    <string name="message_capture_success">Photo captured successfully!</string>
+    <string name="message_camera_permission_required">Camera permission is required to use this feature!</string>
+
+    <!-- AddShippingAddressActivity -->
+    <string name="checkout_add_address_fill_all_fields">Please fill in all fields</string>
+    <string name="checkout_add_address_user_not_logged_in">User not logged in</string>
+    <string name="checkout_add_address_saved_success">Shipping address saved</string>
+    <string name="qr_expired_message">QR Code expired. Please regenerate first.</string>
+    <string name="qr_expired_prompt">QR Code expired. Please regenerate.</string>
+    <string name="qr_expire_countdown">This QR Code will be expired in %1$02d:%2$02d</string>
+
+    <string name="payment_success_title">Payment Successful</string>
+    <string name="payment_success_text">Transaction %1$s for %2$d VND has been completed.</string>
+    <string name="payment_success_detailed">Transaction %1$s for %2$d VND has been completed.</string>
+    <string name="time_just_now">Just now</string>
+
+    <string name="channel_order_title">Order Notifications</string>
+    <string name="channel_order_description">Notifications for successful orders and payments</string>
+
+    <string name="checkout_user_not_found">User information not found</string>
+    <string name="checkout_no_card_info">No card info</string>
+    <string name="checkout_method_not_available">Payment method not available</string>
+    <string name="checkout_shipping_not_available">Shipping address not available</string>
+    <string name="checkout_no_phone">No phone</string>
+    <string name="checkout_order_success_title">Order Placed Successfully!</string>
+    <string name="checkout_order_success_bank">Transaction %1$s for %2$s has been completed.</string>
+    <string name="checkout_order_success_normal">Your order is being processed.</string>
+    <string name="checkout_notification_channel_title">Order Notifications</string>
+    <string name="checkout_notification_channel_description">Notify when an order is placed</string>
+    <string name="checkout_order_confirmed_title">Order Confirmed!</string>
+    <string name="checkout_order_confirmed_text">You have successfully placed an order of %1$s via %2$s at %3$s.</string>
+    <string name="checkout_order_id">Order ID: %1$s</string>
+    <string name="checkout_card_format">%1$s: %2$s ending ••••%3$s</string>
+
+    <string name="checkout_shipping_cod_not_supported">Cash on Delivery is not available for Pickup at store. Please select a different shipping method.</string>
+    <string name="checkout_shipping_pickup_not_supported">Pickup at store is not available with Cash on Delivery. Please select another shipping method.</string>
+    <string name="checkout_shipping_user_not_found">User not found.</string>
+    <string name="checkout_shipping_add_address">Please add a shipping address.</string>
+    <string name="checkout_shipping_select_shipping">Please select a shipping method.</string>
+    <string name="checkout_shipping_select_payment">Please select a payment method.</string>
+    <string name="checkout_shipping_invalid_payment">Invalid payment method</string>
+    <string name="checkout_shipping_confirm_title">Confirm Order</string>
+    <string name="checkout_shipping_confirm_cod">Are you sure you want to place this order and pay with Cash on Delivery?</string>
+    <string name="checkout_shipping_button_yes">Yes</string>
+    <string name="checkout_shipping_button_cancel">Cancel</string>
+    <string name="checkout_shipping_no_card_added">No card added</string>
+    <string name="checkout_shipping_no_user">No user</string>
+
+    <string name="pickup_at_store">Pickup at store</string>
+    <string name="standard_delivery">Standard Delivery</string>
+    <string name="express_delivery">Express Delivery</string>
+    <string name="cod">Cash on Delivery</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="bank_transfer">Bank Transfer</string>
+
+    <string name="transaction_unknown">#UNKNOWN</string>
+    <string name="downloading_receipt">Downloading receipt...</string>
+
+
+    <string name="discount_applied">Applied 100.000 discount</string>
+    <string name="invalid_promo">Invalid promo</string>
+    <string name="empty_cart_warning">Your cart is empty. Please add items before checking out.</string>
+    <string name="free_shipping">Free</string>
+
+    <string name="policy_cancel_html"><![CDATA[
+    <b>Service Cancellation Policy:</b><br/><br/>
+    You may cancel service appointments (e.g., piercings or style consultations) up to 24 hours in advance without penalty.<br/><br/>
+    Late cancellations or no-shows may result in a cancellation fee or loss of promotional eligibility.<br/><br/>
+    Orders for physical products (jewelry) can be cancelled only before they are processed for shipment.
+]]></string>
+
+    <string name="terms_plain_html"><![CDATA[
+    <b>User Account:</b> You must provide accurate and complete information. You are responsible for keeping your login secure.<br/><br/>
+    <b>Orders & Payment:</b> All purchases are subject to availability. Prices and promotions may change without notice.<br/><br/>
+    <b>AR Try-On:</b> Preview jewelry virtually using AR. For visual reference only.<br/><br/>
+    <b>Service Booking:</b> Book services at available branches. Please be punctual.<br/><br/>
+    <b>Refunds & Returns:</b> Refunds only for defective items or valid appointment cancellations.<br/><br/>
+    <b>Data Privacy:</b> We securely store your data and do not sell it to third parties.<br/><br/>
+    <b>Policy Updates:</b> We may change policies without prior notice.
+]]></string>
+
+    <string name="select_gender">Select gender</string>
+    <string name="complete_profile_fill_all">Please fill in all information.</string>
+    <string name="complete_profile_user_not_found">User not found.</string>
+    <string name="complete_profile_phone_exists">Phone number already exists.</string>
+
+    <string name="create_password_fill_all">Please fill in all fields.</string>
+    <string name="create_password_mismatch">Passwords do not match.</string>
+    <string name="create_password_success">Password updated successfully.</string>
+    <string name="create_password_user_not_found">User not found.</string>
+
+    <string name="profile_update_success">Profile updated successfully</string>
+    <string name="profile_update_user_not_found">User not found</string>
+    <string name="profile_avatar_note_default">Tap the image to change avatar</string>
+
+    <string name="invalid_email_format">Invalid email format!</string>
+    <string name="email_does_not_exist">Email does not exist!</string>
+    <string name="otp_email_subject">Your OTP Code</string>
+    <string name="otp_email_body">Your OTP is: %1$s</string>
+    <string name="otp_sent">OTP sent to your email</string>
+
+    <!-- FAQ Categories -->
+    <string name="faq_category_delivery">Delivery</string>
+    <string name="faq_category_order">Order</string>
+    <string name="faq_category_pricing">Pricing</string>
+    <string name="faq_category_service">Service</string>
+
+    <!-- DELIVERY FAQs -->
+    <string name="faq_delivery_missed">What happens if I miss my delivery?</string>
+    <string name="faq_delivery_missed_answer">We will reschedule the delivery on the next available date.</string>
+
+    <string name="faq_delivery_time">What is the estimated delivery time?</string>
+    <string name="faq_delivery_time_answer">Delivery takes 2–3 business days depending on your location.</string>
+
+    <string name="faq_delivery_change_address">Can I change my delivery address after placing an order?</string>
+    <string name="faq_delivery_change_address_answer">Yes, before the order is shipped.</string>
+
+    <string name="faq_delivery_express">Is there an express delivery service?</string>
+    <string name="faq_delivery_express_answer">Yes, within city: 2-4 hrs, nearby: 1-2 days, others: 2-3 days.</string>
+
+    <!-- ORDER FAQs -->
+    <string name="faq_order_track">How can I track my order?</string>
+    <string name="faq_order_track_answer">You will receive a tracking link via email.</string>
+
+    <string name="faq_order_cancel">Can I cancel my order after confirmation?</string>
+    <string name="faq_order_cancel_answer">Only before shipment.</string>
+
+    <string name="faq_order_wrong_item">What should I do if I receive a wrong item?</string>
+    <string name="faq_order_wrong_item_answer">Please contact support immediately.</string>
+
+    <string name="faq_order_modify">Is it possible to modify my order after checkout?</string>
+    <string name="faq_order_modify_answer">You can edit your order before it ships.</string>
+
+    <!-- PRICING FAQs -->
+    <string name="faq_pricing_calculation">How is the delivery cost calculated?</string>
+    <string name="faq_pricing_calculation_answer">It depends on weight and distance.</string>
+
+    <string name="faq_pricing_hidden">Are there any hidden charges?</string>
+    <string name="faq_pricing_hidden_answer">No, all charges are shown at checkout.</string>
+
+    <string name="faq_pricing_bulk">Do you offer discounts for bulk orders?</string>
+    <string name="faq_pricing_bulk_answer">Yes, for orders over 10 items.</string>
+
+    <string name="faq_pricing_payment_methods">What payment methods are accepted?</string>
+    <string name="faq_pricing_payment_methods_answer">Visa, MasterCard, PayPal, COD.</string>
+
+    <!-- SERVICE FAQs -->
+    <string name="faq_service_weekends">Do you deliver on weekends?</string>
+    <string name="faq_service_weekends_answer">Yes, but only in selected areas.</string>
+
+    <string name="faq_service_return_policy">What is your return policy?</string>
+    <string name="faq_service_return_policy_answer">Returns are accepted within 14 days.</string>
+
+    <string name="faq_service_installation">Do you provide installation services?</string>
+    <string name="faq_service_installation_answer">Yes, available for selected products.</string>
+
+    <string name="faq_service_schedule">Can I schedule a specific delivery time?</string>
+    <string name="faq_service_schedule_answer">Yes, contact support to arrange this.</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="login_google_button">Sign in with Google</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_register_prompt">Don\'t have an account? Register</string>
+    <string name="login_terms_agree">I agree to the Terms and Conditions</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_fill_all">Please enter both Email and Password.</string>
+    <string name="toast_invalid_email">Invalid email format.</string>
+    <string name="toast_agree_terms">Please agree to the terms to continue.</string>
+    <string name="toast_google_canceled">Google Sign-In canceled</string>
+    <string name="toast_google_failed">Google Sign-In failed: %1$s</string>
+
+    <string name="please_login_wishlist">Please log in to view your wishlist</string>
+    <string name="please_login_orders">Please log in to view your orders.</string>
+    <string name="please_login_payment">Please log in to access payment methods</string>
+    <string name="logout_confirm_title">Are you sure you want to log out?</string>
+    <string name="logout_yes">Yes</string>
+    <string name="logout_no">No</string>
+
+    <string name="register_fill_all_fields">Please fill in all required fields.</string>
+
+    <string name="passwords_do_not_match">Passwords do not match.</string>
+    <string name="agree_terms_to_continue">Please agree to the terms to continue.</string>
+    <string name="username_exists">Username already exists. Please choose another one.</string>
+    <string name="email_exists">Email already exists. Please use another one.</string>
+    <string name="account_created_successfully">Account created successfully!</string>
+    <string name="error_creating_account"> Error Creating Account!</string>
+
+    <string name="contact_customer_service">Customer Service</string>
+    <string name="contact_website">Website</string>
+
+    <string name="camera_not_available">Camera not available</string>
+    <string name="photo_captured_success">Photo captured successfully.</string>
+    <string name="camera_permission_denied">Camera permission not granted.</string>
+
+    <string name="schedule_login_required">Please log in to book an appointment!</string>
+    <string name="schedule_select_date">Please select a date!</string>
+    <string name="schedule_select_time">Please select a time!</string>
+    <string name="schedule_select_service">Please select a service!</string>
+    <string name="notification_appointment_title">Appointment Confirmed</string>
+    <string name="notification_appointment_message">You have successfully booked an appointment on %1$s at %2$s for the service: %3$s</string>
+    <string name="estimated_date_label">Estimated Date of Delivery: %1$s</string>
+
+
+    <string name="faq_pricing_calc">How is the delivery cost calculated?</string>
+    <string name="faq_pricing_calc_answer">It depends on weight and distance.</string>
+
+    <string name="faq_pricing_hidden_fees">Are there any hidden charges?</string>
+    <string name="faq_pricing_hidden_fees_answer">No, all charges are shown at checkout.</string>
+
+    <string name="faq_pricing_bulk_discount">Do you offer discounts for bulk orders?</string>
+    <string name="faq_pricing_bulk_discount_answer">Yes, for orders over 10 items.</string>
+
+    <string name="faq_pricing_methods">What payment methods are accepted?</string>
+    <string name="faq_pricing_methods_answer">Visa, MasterCard, PayPal, COD.</string>
+    <string name="faq_delivery_address_change">Can I change my delivery address after placing an order?</string>
+    <string name="faq_delivery_address_change_answer">Yes, before the order is shipped.</string>
+    <string name="faq_service_return">What is your return policy?</string>
+    <string name="faq_service_return_answer">Returns are accepted within 14 days.</string>
+
+    <string name="title_orders">My Orders</string>
+    <string name="tab_orders_ongoing">Ongoing</string>
+    <string name="tab_orders_completed">Completed</string>
+
+    <string name="title_privacy_policy">Privacy Policy</string>
+    <string name="title_cancellation_policy">Cancellation Policy</string>
+    <string name="title_terms_and_conditions">Terms and Conditions</string>
+    <string name="title_save_information">Save Login Information</string>
+    <string name="please_login">Please Login</string>
+    <string name="total_amount_label">Total Amount</string>
+    <string name="title_selected_address">Select Address</string>
+    <string name="title_filter_price">Filter by Price</string>
+    <string name="title_filter_category">Filter by Category</string>
+    <string name="title_apply_filter">Apply Filter</string>
+
+</resources>

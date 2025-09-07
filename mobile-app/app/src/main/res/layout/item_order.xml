@@ -1,0 +1,136 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <!-- Trạng thái đơn hàng -->
+        <TextView
+            android:id="@+id/txtOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="To Receive"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/accent_dark"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Danh sách sản phẩm -->
+        <LinearLayout
+            android:id="@+id/layoutOrderItems"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Tổng tiền -->
+        <TextView
+            android:id="@+id/txtOrderItemTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:text="Total: 330.000 VND"
+            android:fontFamily="@font/montserrat_medium"
+            android:textStyle="bold"
+            android:textColor="@color/accent_dark" />
+
+        <!-- Group: Completed -->
+        <LinearLayout
+            android:id="@+id/groupShipped"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:minHeight="40dp"
+                android:text="@string/title_button_order_delete"
+                android:textSize="12sp"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/outline_border"
+                app:strokeWidth="1dp"
+                app:cornerRadius="8dp"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginBottom="3dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuyAgain"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:minHeight="40dp"
+                android:text="@string/title_button_order_buy_again"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="8dp"
+                app:backgroundTint="@color/accent_light"
+                app:strokeColor="@color/outline_border"
+                app:strokeWidth="1dp"
+                app:cornerRadius="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="3dp" />
+        </LinearLayout>
+
+        <!-- Group: Ongoing -->
+        <LinearLayout
+            android:id="@+id/groupToReceive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOrderReceived"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="@string/title_button_order_received"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:minHeight="40dp"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/outline_border"
+                app:strokeWidth="1dp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/outline_text"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTrackOrder"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="@string/title_button_order_track"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:minHeight="40dp"
+                app:backgroundTint="@color/accent_light"
+                app:strokeColor="@color/outline_border"
+                app:strokeWidth="1dp"
+                app:cornerRadius="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:name=".ReboundApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ReboundLogin"
+        tools:targetApi="31">
+        <activity
+            android:name=".ar.ArCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.PaymentSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.BankTransferQRCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.WishlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.CategoryProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.ShoppingCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.NewsDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.NoNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.SearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ReboundLogin" />
+        <activity
+            android:name=".main.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.SearchNoResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.PasswordChangedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.AddShippingAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.CheckOutShippingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.CheckOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.CreateNewCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.CompleteProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.CreateNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.OTPVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.HelpCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.NavBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.PrivacyPolicyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.LanguageSelectorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+    </application>
+
+</manifest>

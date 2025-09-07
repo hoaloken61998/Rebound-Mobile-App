@@ -1,0 +1,71 @@
+
+<div class="form-container">
+  <h1>Order Details</h1>
+  <fieldset>
+    <!-- Customer Information -->
+    <div>
+      <label><strong>Customer Name:</strong></label>
+      <p>John Doe</p>
+      <label><strong>Phone Number:</strong></label>
+      <p>0123456789</p>
+      <label><strong>Address:</strong></label>
+      <p>123 Main Street, Hanoi</p>
+      <label><strong>Special Note/Request:</strong></label>
+      <p>Please deliver before 6 PM.</p>
+    </div>
+    
+    <!-- Product Information -->
+    <h2>Product Lists</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Sub Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Product 1</td>
+          <td>2</td>
+          <td>500 VND</td>
+          <td>1000 VND</td>
+        </tr>
+        <tr>
+          <td>Product 2</td>
+          <td>1</td>
+          <td>1000 VND</td>
+          <td>1000 VND</td>
+        </tr>
+      </tbody>
+    </table>
+    <label><strong>Total amount:</strong></label>
+    <p>200000VND</p>
+    
+    <!-- Shipping Method -->
+    <label><strong>Shipping Method:</strong></label>
+    <p>Standard Shipping</p>
+
+    <!-- Payment Method -->
+    <label><strong>Payment Method:</strong></label>
+    <p>Cash on Delivery</p>
+
+    <!-- Order Status -->
+    <div class="order-status">
+      <strong>Order Status:</strong> <span style="color: green;">Confirmed</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="btn back-button" onclick="window.history.back()">Back</button>
+      <button class="btn" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+  function confirmOrder() {
+    alert("Order Confirmed!");
+  }
+</script>

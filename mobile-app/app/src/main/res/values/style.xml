@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MenuTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">#847c4a</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BottomNavTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#847c4a</item>
+    </style>
+    <style name="NoElevationButton" parent="Widget.MaterialComponents.Button">
+        <item name="elevation">0dp</item>
+        <item name="backgroundTint">#847c4a</item> <!-- tuỳ chỉnh -->
+    </style>
+    <style name="MyButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Bo góc cho Dialog -->
+    <style name="DialogCorner" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Style tổng thể cho Dialog -->
+    <style name="CustomDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="shapeAppearanceMediumComponent">@style/DialogCorner</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorPrimary">@color/dark_text</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonPositive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonNegative</item>
+    </style>
+
+    <!-- Nút "Delete" -->
+    <style name="DialogButtonPositive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/accent_dark</item>
+    </style>
+
+    <!-- Nút "Cancel" -->
+    <style name="DialogButtonNegative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/outline_text</item>
+    </style>
+</resources>

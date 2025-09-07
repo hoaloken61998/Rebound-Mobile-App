@@ -1,0 +1,307 @@
+/* src/app/product-management/product-management.component.css */
+
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Global styles within this component */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat globally within component */
+}
+
+/* Container for the entire page content */
+.container {
+    padding: 20px;
+    max-width: 1200px; /* Limit width for better readability on large screens */
+    margin: 0 auto; /* Center the container */
+    background-color: #F4F2EB; /* Background color from body */
+    color: #595031; /* Text color from body */
+}
+
+/* Body styles - often global, but included here for completeness */
+/* Note: These styles should ideally be in a global stylesheet (e.g., styles.css) */
+body {
+    color: #595031;
+    background-color: #F4F2EB;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F2EB;
+    padding: 20px 0; /* Adjusted padding as container already has it */
+    position: relative; /* For positioning the add button */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 7px;
+    padding: 0;
+    color: #595031;
+    font-weight: bold;
+}
+
+.header h3 {
+    font-size: 24px;
+    margin-bottom: 0; /* Adjusted as it's not a standalone element now from previous version */
+    padding: 0;
+    color: #595031;
+}
+
+/* Add button styling */
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 103px;
+    height: 40px;
+    background-color: #C4B79D; /* Match provided color */
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    /* Position Absolute from your old code - removed to allow flex positioning */
+    /* position: absolute;
+    right: 5px;
+    top: calc(100% - 80px); */
+    margin-left: auto; /* Push to the right if in a flex container (like .header) */
+}
+
+.add-button svg {
+    fill: white;
+}
+
+/* Search and Filter Bar Styling */
+.search-and-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 15px; /* Spacing between search and filter boxes */
+}
+
+.search-box, .filter-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #A89D6E;
+    border-radius: 20px;
+    padding: 8px 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    flex-grow: 1; /* Allows search box to take up available space */
+    max-width: 400px; /* Limit width */
+}
+
+.filter-box {
+    /* Specific styles for the filter dropdown if needed */
+    padding: 8px 15px;
+    border: 1px solid #A89D6E;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    color: #595031;
+}
+
+.search-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #A89D6E;
+}
+
+.search-box button:hover {
+    color: #595031;
+}
+
+.filter-box label {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #595031;
+}
+
+.filter-box select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #595031;
+    padding: 0; /* Remove default select padding */
+    cursor: pointer;
+}
+
+
+/* Product Table Styling */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Space before delete button */
+}
+
+.product-table-header {
+    background-color: #A89D6E; /* Match provided color */
+    color: white;
+}
+
+.product-table th, .product-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-table-row {
+    background-color: white;
+}
+
+.product-table-row:hover {
+    background-color: #f5f5f5;
+}
+
+/* Product Image in Table */
+.product-image {
+    width: 50px; /* Match user's specified width */
+    height: 50px; /* Match user's specified height */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 5px; /* Optional: subtle rounded corners for images */
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 2px solid #A89D6E; /* Default border color */
+    border-radius: 4px;
+    background-color: #fff; /* Unchecked background */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    -webkit-appearance: none; /* Hide default checkbox */
+    -moz-appearance: none;
+    appearance: none;
+    position: relative; /* For custom checkmark */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #A89D6E; /* Checked background */
+    border-color: #A89D6E;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; /* Custom checkmark */
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Actions Column Buttons */
+.table-actions {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+}
+
+/* General button reset from your provided CSS */
+button {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    /* justify-content: space-around; This property is for flex containers, not individual buttons */
+    padding: 0; /* Reset padding for raw buttons by default */
+}
+
+/* New .btn class for View/Edit/Delete action buttons (text-based) */
+.btn {
+    background-color: #C4B79D; /* A neutral color from your palette */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; /* Apply font */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensure no underline if using as routerLink */
+    display: inline-block; /* Essential for padding/margins and proper display */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.btn:hover {
+    background-color: #A89D6E; /* Slightly darker hover */
+}
+
+/* Delete button at the bottom of the page */
+.delete-button {
+    background-color: #ddd7c0; /* Match provided color */
+    color: #4b3d2d;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 137px;
+    height: 42px;
+    margin: 20px auto; /* Center the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button:hover {
+    background-color: #b1a681;
+    transform: translateY(-2px);
+}
+
+.delete-button:focus {
+    outline: none;
+}
+
+/* Basic styling for status cells/buttons in product table */
+/* Assuming you want to style the cell content itself, not a button */
+.product-table td.status-cell {
+    /* Add specific styles for status text if needed */
+    font-weight: bold;
+}
+
+/* Example: Styling for different status names if needed */
+/*
+.product-table td.status-cell.available {
+    color: #28a745;
+}
+.product-table td.status-cell.out-of-stock {
+    color: #dc3545;
+}
+.product-table td.status-cell.coming-soon {
+    color: #ffc107;
+}
+*/

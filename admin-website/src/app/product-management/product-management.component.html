@@ -1,0 +1,96 @@
+<!-- src/app/product-management/product-management.component.html -->
+<div class="container">
+    <div class="search-and-filter-bar">
+        <div class="search-box">
+            <input type="text" (input)="updateSearchQuery($event)" placeholder="Search products...">
+            <button>
+                <svg width="100%" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7422 10.3439C12.5329 9.2673 13 7.9382 13 6.5C13 2.91015 10.0899 0 6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C7.93858 13 9.26801 12.5327 10.3448 11.7415L10.3439 11.7422C10.3734 11.7822 10.4062 11.8204 10.4424 11.8566L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L11.8566 10.4424C11.8204 10.4062 11.7822 10.3734 11.7422 10.3439ZM12 6.5C12 9.53757 9.53757 12 6.5 12C3.46243 12 1 9.53757 1 6.5C1 3.46243 3.46243 1 6.5 1C9.53757 1 12 3.46243 12 6.5Z" fill="black"/>
+                </svg>                
+            </button>
+        </div>
+
+        <!-- Filter by Category -->
+        <div class="filter-box">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter" [(ngModel)]="selectedCategoryFilter">
+                <option value="All">All Categories</option>
+                <option *ngFor="let category of categories" [value]="category.CategoryName">{{ category.CategoryName }}</option>
+            </select>
+        </div>
+
+        <!-- Filter by Status -->
+        <div class="filter-box">
+            <label for="statusFilter">Status:</label>
+            <select id="statusFilter" [(ngModel)]="selectedStatusFilter">
+                <option value="All">All Statuses</option>
+                <option *ngFor="let status of productStatuses" [value]="status.StatusName">{{ status.StatusName }}</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div>
+            <h1>Product Management</h1>
+            <h3>Total Products: {{ filteredProducts.length }}</h3>
+        </div>
+        <button class="add-button" [routerLink]="['/add-product']">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.52 15.192V0.407999H10.648V15.192H6.52ZM0.984 9.752V5.848H16.216V9.752H0.984Z" fill="white"/>
+            </svg>
+            Add                
+        </button>
+    </div>
+
+    <!-- Product Table -->
+    <table class="product-table">
+        <thead class="product-table-header">
+            <tr>
+                <th><input type="checkbox" class="header-checkbox" (click)="selectAllProducts($event)"></th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Product ID</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of filteredProducts" class="product-table-row">
+                <td><input type="checkbox" [checked]="product.selected" (change)="toggleProductSelection(product)"></td>
+                <td>
+                    <img [src]="product.ImageLink || 'https://placehold.co/50x50/eeeeee/black?text=No+Img'" alt="Product Image" class="product-image">
+                </td>
+                <td>{{ product.ProductName || 'N/A' }}</td>
+                <td>{{ product.ProductID || 'N/A' }}</td>
+                <td>{{ formatPrice(product.ProductPrice) }}</td>
+                <td>{{ product.ProductStockQuantity || 'N/A' }}</td>
+                <!-- Sử dụng helper function để hiển thị tên trạng thái -->
+                <td>{{ getProductStatusName(product.StatusID) }}</td>
+                <!-- Sử dụng helper function để hiển thị tên Category -->
+                <td>{{ getProductCategoryName(product.CategoryID) }}</td>
+                <td>
+                    <div class="table-actions">
+                        <!-- Nút Edit -->
+                        <button class="btn" [routerLink]="['/edit-product', product.id]" aria-label="Edit Product">
+                            Edit
+                        </button>
+                        <!-- Nút Delete -->
+                        <button class="btn" (click)="deleteProduct(product.id)" aria-label="Delete Product">
+                            Delete
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngIf="filteredProducts.length === 0">
+                <td colspan="9" style="text-align: center;">No products found.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Delete Selected Products Button -->
+    <button class="delete-button" (click)="deleteSelectedProducts()">Delete Selected</button>
+</div>

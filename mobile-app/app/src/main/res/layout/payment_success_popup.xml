@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="343dp"
+    android:layout_height="450dp"
+    android:id="@+id/main"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_popup_rounded"
+    android:padding="24dp">
+
+    <!-- Close Icon -->
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/txtPaymentSuccessfulTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_payment_successful"
+        android:textStyle="bold"
+        android:textColor="#1E1E1E"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/imgClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Check Icon -->
+    <ImageView
+        android:id="@+id/imgCheck"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/ic_payment_success"
+        app:layout_constraintTop_toBottomOf="@id/txtPaymentSuccessfulTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/txtPaymentSuccessfulMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_payment_successful_message"
+        android:textColor="#1E1E1E"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imgCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/txtPaymentSuccessfulOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_payment_successful_order_id"
+        android:textColor="#888888"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgLinePayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Rating Prompt -->
+    <ImageView
+        android:id="@+id/imgLinePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/line_payment"
+        app:layout_constraintTop_toBottomOf="@id/txtPaymentSuccessfulOrderId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Rating Emojis -->
+    <TextView
+        android:id="@+id/txtPaymentSuccessfulRatePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_payment_successful_rate_prompt"
+        android:textColor="#1E1E1E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPaymentSuccessfulOrderId" />
+
+    <LinearLayout
+        android:id="@+id/layoutRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtPaymentSuccessfulRatePrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgSad"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_sad"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/imgNeutral"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="8dp"
+            android:src="@mipmap/ic_neutral"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/imgHappy"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_happy"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/layoutRating"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPaymentSuccessfulBackShop"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/btn_payment_successful_back_shop"
+                app:cornerRadius="15dp"
+                app:strokeWidth="0.5dp"
+                app:strokeColor="#AB9E67"
+                app:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

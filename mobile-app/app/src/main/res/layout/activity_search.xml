@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/ic_logo_small" />
+
+            <!-- Search and Filter -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_back" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:queryHint="@string/title_search_hint"
+                    android:iconifiedByDefault="false"
+                    android:background="@drawable/bg_search" />
+
+                <ImageView
+                    android:id="@+id/btnSearchFilter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_filter"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/title_button_search_filter" />
+            </LinearLayout>
+
+            <!-- Searched Recently -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_searched_recently"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="24dp"
+                android:paddingBottom="8dp" />
+
+            <com.rebound.main.FlowLayout
+                android:id="@+id/searchRecentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Popular -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_search_popular"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="24dp"
+                android:paddingBottom="8dp" />
+
+            <com.rebound.main.FlowLayout
+                android:id="@+id/searchPopularContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Search Results Container -->
+            <FrameLayout
+                android:id="@+id/searchResultContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Overlay filter dropdowns, now below the search bar, smaller size -->
+    <LinearLayout
+        android:id="@+id/filterDropdownContainer"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="end"
+        android:layout_gravity="top|end"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/title_filter_price"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <EditText
+                android:id="@+id/edtMinPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Min"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+            <EditText
+                android:id="@+id/edtMaxPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerPriceRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/title_filter_category"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_apply_filter"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+
+</FrameLayout>

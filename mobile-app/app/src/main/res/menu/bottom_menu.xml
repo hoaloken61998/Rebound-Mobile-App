@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/txtNavigationShop"
+        android:icon="@mipmap/ic_cart"
+        android:title="@string/title_navigation_shop" />
+
+    <item
+        android:id="@+id/txtNavigationSchedule"
+        android:icon="@mipmap/ic_schedule"
+        android:title="@string/title_navigation_schedule" />
+
+    <item
+        android:id="@+id/txtNavigationBlank"
+        android:enabled="false"
+        android:icon="@drawable/ic_transparent"
+        android:title=""
+        android:checkable="false" />
+
+    <item
+        android:id="@+id/txtNavigationNews"
+        android:icon="@mipmap/ic_news"
+        android:title="@string/title_navigation_news" />
+
+    <item
+        android:id="@+id/txtNavigationProfile"
+        android:icon="@mipmap/ic_profile"
+        android:title="@string/title_navigation_profile" />
+</menu>

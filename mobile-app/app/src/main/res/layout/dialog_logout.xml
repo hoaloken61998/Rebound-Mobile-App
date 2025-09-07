@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="328dp"
+    android:layout_height="201dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:elevation="8dp">
+
+    <TextView
+        android:id="@+id/txtLogOutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/title_logout_message"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtLogOutMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/title_logout_confirmation"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnLogOutYes"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#DDD7C0"
+            android:elevation="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/title_button_logout_yes"
+            android:textColor="#877A4A"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogOutNo"
+            android:layout_width="97dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/title_button_logout_no"
+            android:textColor="#877A4A"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

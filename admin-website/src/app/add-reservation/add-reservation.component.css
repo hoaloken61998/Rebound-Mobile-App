@@ -1,0 +1,98 @@
+.form-container {
+    background-color: #F4F2EB;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.form-container h1,
+.form-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #595031;
+    margin-bottom: 20px;
+}
+
+.form-container h1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.form-container h2 {
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+
+fieldset {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #D1CBB8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color:#595031;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border: 1px solid #D1CBB8;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 4dvh;
+
+}
+
+.btn {
+    height: 42px;
+    width: 137px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:15px;
+    background-color: #DDD7C0;
+    color: #595031;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #C5BFA7;
+}
+.header-table{
+    font-weight: bold;
+    color:#595031;
+    font-size: 20px;
+}

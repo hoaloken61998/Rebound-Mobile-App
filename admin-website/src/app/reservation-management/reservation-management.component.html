@@ -1,0 +1,94 @@
+<div class="container">
+    <!-- Search Box -->
+    <div class="search-box">
+        <!-- Đã bỏ disabled và thêm (input) event -->
+        <input type="text" placeholder="Search reservations..." (input)="updateSearchQuery($event)">
+        <button>
+            <svg width="100%" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.7422 10.3439C12.5329 9.2673 13 7.9382 13 6.5C13 2.91015 10.0899 0 6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C7.93858 13 9.26801 12.5327 10.3448 11.7415L10.3439 11.7422C10.3734 11.7822 10.4062 11.8204 10.4424 11.8566L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L11.8566 10.4424C11.8204 10.4062 11.7822 10.3734 11.7422 10.3439ZM12 6.5C12 9.53757 9.53757 12 6.5 12C3.46243 12 1 9.53757 1 6.5C1 3.46243 3.46243 1 6.5 1C9.53757 1 12 3.46243 12 6.5Z" fill="black"/>
+            </svg>                
+        </button>
+    </div>
+    
+    <!-- Header Section -->
+    <div class="header">
+        <div>
+            <h1>Reservation Management</h1>
+            <h3>Total reservations: {{ filteredReservations.length }}</h3> <!-- Sử dụng filteredReservations.length -->
+        </div>
+        <button class="add-button" [routerLink]="['/add-reservation']">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.52 15.192V0.407999H10.648V15.192H6.52ZM0.984 9.752V5.848H16.216V9.752H0.984Z" fill="white"/>
+            </svg>
+            Add
+        </button>
+    </div>
+
+    <!-- Reservation Table -->
+    <table class="service-table">
+        <thead class="service-table-header">
+            <tr>
+                <th><input type="checkbox" class="header-checkbox" (click)="selectAllReservations($event)"></th>
+                <th>Booking ID</th> <!-- Đã thay Reservation ID -->
+                <th>User ID</th> <!-- Đã thay Customer Name -->
+                <th>Service ID</th> <!-- Đã thay Service Type -->
+                <th>Status</th>
+                <th>Booking Time</th> <!-- Đã thay Reservation Date -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sử dụng filteredReservations() -->
+            <tr *ngFor="let reservation of filteredReservations" class="service-table-row">
+                <td><input type="checkbox" [checked]="reservation.selected" (change)="toggleReservationSelection(reservation)"></td>
+                <td>{{ reservation.BookingID }}</td> <!-- Sử dụng BookingID -->
+                <td>{{ reservation.UserID }}</td> <!-- Sử dụng UserID -->
+                <td>{{ reservation.ServiceID }}</td> <!-- Sử dụng ServiceID -->
+                <td>
+                    <button (click)="toggleStatus(reservation)"
+                            [ngClass]="{
+                                'status-confirmed': reservation.Status === 'Confirmed',
+                                'status-cancelled': reservation.Status === 'Cancelled',
+                                'status-pending': reservation.Status === 'Pending'
+                            }">
+                        {{ reservation.Status }}
+                    </button>
+                </td>
+                <td>{{ formatDate(reservation.BookingTime) }}</td> <!-- Sử dụng BookingTime -->
+                <td>
+                    <div class="table-actions">
+                        <button (click)="editReservation(reservation)"> <!-- Truyền toàn bộ object reservation -->
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_321_3885)">
+                                    <path d="M7.85707 19.2344L0.785645 21.2144L2.76564 14.1429L15.7142 1.25723C15.8606 1.10756 16.0353 0.988632 16.2283 0.90744C16.4212 0.826248 16.6285 0.784424 16.8378 0.784424C17.0471 0.784424 17.2543 0.826248 17.4473 0.90744C17.6402 0.988632 17.815 1.10756 17.9614 1.25723L20.7428 4.05437C20.8901 4.20046 21.007 4.37426 21.0868 4.56575C21.1665 4.75724 21.2076 4.96264 21.2076 5.17009C21.2076 5.37753 21.1665 5.58293 21.0868 5.77442C21.007 5.96591 20.8901 6.13971 20.7428 6.2858L7.85707 19.2344Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_321_3885">
+                                        <rect width="22" height="22" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>                                                            
+
+                        </button>
+                        <!-- Trash bin button to delete -->
+                        <button (click)="deleteReservation(reservation.id)"> <!-- Sử dụng reservation.id -->
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.57129 5.5H20.4284" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.92822 5.5H18.0711V19.6429C18.0711 20.0596 17.9055 20.4593 17.6108 20.754C17.3161 21.0487 16.9164 21.2143 16.4997 21.2143H5.49965C5.08288 21.2143 4.68318 21.0487 4.38848 20.754C4.09378 20.4593 3.92822 20.0596 3.92822 19.6429V5.5Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.07129 5.49993V4.71422C7.07129 3.67229 7.48519 2.67305 8.22194 1.9363C8.95869 1.19955 9.95794 0.785645 10.9999 0.785645C12.0418 0.785645 13.041 1.19955 13.7778 1.9363C14.5145 2.67305 14.9284 3.67229 14.9284 4.71422V5.49993" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.64258 8.64282V17.2857" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.3569 8.64282V17.2857" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngIf="filteredReservations.length === 0">
+                <td colspan="7" style="text-align: center;">No reservations found.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Delete Button -->
+    <button class="delete-button" (click)="deleteSelectedReservations()">Delete Selected</button>
+</div>

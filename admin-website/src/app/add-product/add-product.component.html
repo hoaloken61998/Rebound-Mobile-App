@@ -1,0 +1,75 @@
+<div class="form-container">
+  <h1>Add Product</h1>
+  <form (submit)="onSubmit($event)">
+    <fieldset>
+      <h2>Product Information</h2>
+
+      <!-- Product Name -->
+      <label for="productName">Product Name</label>
+      <input type="text" id="productName" [(ngModel)]="newProduct.ProductName" name="productName" placeholder="Enter product name" required>
+
+      <!-- Image Upload/Preview -->
+      <label for="productImage">Product Image</label>
+      <div class="image-upload-preview">
+        <img [src]="newProduct.ImageLink" alt="Product Image Preview" class="product-image-preview">
+        <input type="file" id="productImage" (change)="onFileSelected($event)" accept="image/*" />
+        <p class="image-upload-note">Note: Image upload functionality requires Firebase Storage integration.</p>
+      </div>
+
+      <div class="row">
+        <!-- Product Category -->
+        <div class="col">
+          <label for="productCategory">Product Category</label>
+          <select id="productCategory" [(ngModel)]="newProduct.CategoryID" name="productCategory" required>
+            <option [ngValue]="undefined" disabled selected>Select a category</option>
+            <option *ngFor="let category of categories" [ngValue]="category.CategoryID">{{ category.CategoryName }}</option>
+          </select>
+        </div>
+        <!-- Status -->
+        <div class="col">
+          <label for="productStatus">Status</label>
+          <select id="productStatus" [(ngModel)]="newProduct.StatusID" name="productStatus" required>
+            <option [ngValue]="undefined" disabled selected>Select a status</option>
+            <option *ngFor="let status of productStatuses" [ngValue]="status.StatusID">{{ status.StatusName }}</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <label for="productDescription">Description</label>
+      <textarea id="productDescription" [(ngModel)]="newProduct.ProductDescription" name="productDescription" rows="5" placeholder="Write description here..."></textarea>
+
+      <div class="row">
+        <!-- Price -->
+        <div class="col">
+          <label for="productPrice">Price</label>
+          <input type="text" id="productPrice" [(ngModel)]="newProduct.ProductPrice" (input)="formatPriceInput($event)" name="productPrice" placeholder="Price" required>
+        </div>
+        <!-- Origin (If applicable to your Firebase schema) -->
+        <div class="col">
+          <label for="productOrigin">Origin</label>
+          <input type="text" id="productOrigin" [(ngModel)]="newProduct.Origin" name="productOrigin" placeholder="Origin">
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Stock -->
+        <div class="col">
+          <label for="productStock">Stock</label>
+          <input type="number" id="productStock" [(ngModel)]="newProduct.ProductStockQuantity" name="productStock" placeholder="Stock" required min="0">
+        </div>
+        <!-- Customize (If applicable to your Firebase schema) -->
+        <div class="col">
+          <label for="productCustomize">Customize</label>
+          <input type="text" id="productCustomize" [(ngModel)]="newProduct.Customize" name="productCustomize" placeholder="Customize">
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="action-buttons">
+      <button type="button" class="btn" (click)="goBack()">Back</button>
+      <button type="button" class="btn" (click)="clearForm()">Clear</button> <!-- Changed type to button and added click handler -->
+      <button type="submit" class="btn">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/main"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_back" />
+
+            <TextView
+                android:id="@+id/txtCheckOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title_checkout"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <!-- Shipping Address Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_checkout_info_shipping_address"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+
+            <!-- User info section with arrow on the right -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtCheckoutUsername"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txtCheckoutAddress"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txtCheckoutPhone"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgArrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Add Address Button -->
+        <LinearLayout
+            android:id="@+id/btnCheckOutInfoAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_field_bg"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title_checkout_info_add_shipping_address"
+                android:textColor="#555555"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_add" />
+        </LinearLayout>
+
+        <!-- Shipping Method Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_checkout_info_shipping_method"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp" />
+
+        <!-- Shipping Method Spinner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_field_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerShipping"
+                android:layout_width="match_parent"
+                android:entries="@array/shipping_methods"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingEnd="32dp"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/imgCheckOutInfoShippingArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_spinner" />
+        </RelativeLayout>
+
+        <!-- Payment Method Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_checkout_info_payment_method"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_field_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerPayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/payment_method"
+                android:background="@android:color/transparent"
+                android:paddingEnd="32dp"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/imgCheckOutInfoPaymentArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_spinner" />
+        </RelativeLayout>
+
+
+
+
+        <!-- Total Summary -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-2dp"
+                android:text="@string/title_checkout_info_total"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtCheckOutInfoTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="4.535.000"
+                android:textColor="#E08A68"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <!-- Checkout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/title_button_checkout_info"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#89784B"
+            app:cornerRadius="100dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+

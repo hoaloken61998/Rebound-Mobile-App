@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/txtPaymentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_payment_bank_transfer"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgPaymentBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:src="@mipmap/ic_back" />
+    </FrameLayout>
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:id="@+id/imgPaymentLogo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_logo"
+        android:scaleType="fitCenter" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/txtPaymentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:background="#EFEAD8"
+        android:padding="6dp"
+        android:text="@string/title_payment_success"
+        android:textColor="#6A5F32" />
+
+    <!-- Info Rows -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="32dp">
+
+        <!-- Transaction Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/title_payment_transaction_number"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/txtPaymentTransactionId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="#943NAJ932"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/title_payment_time"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/txtPaymentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:41 AM"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Money Sent -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/title_payment_money_sent"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/txtPaymentAmountSent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.900.000vnd"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- We Receive -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="@string/title_payment_we_receive"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/txtPaymentAmountReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.900.000vnd"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Download button -->
+    <Button
+        android:id="@+id/btnPaymentDownloadReceipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_payment_download_receipt"
+        android:background="@drawable/bg_rounded_button"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="100dp" />
+</LinearLayout>
